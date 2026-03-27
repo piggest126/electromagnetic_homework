@@ -1,0 +1,173 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{unicode-math}
+\usetikzlibrary{arrows.meta, decorations.markings,patterns}
+\begin{document}
+
+$$\rho = \frac{q}{\frac{4}{3}\pi R^3} = \frac{3q}{4\pi R^3}$$
+
+球外 $ r \ge R $
+取高斯面为半径 $ r $ 的球面，包围总电荷 $ q $:
+$$E_{\text{外}}(r) \cdot 4\pi r^2 = \frac{q}{\varepsilon_0}\qquad E_{\text{外}}(r) = \frac{q}{4\pi\varepsilon_0 r^2}$$
+$\quad$球内 $ r \le R $
+高斯面内电荷:
+$$Q_{\text{内}}(r) = \rho \cdot \frac{4}{3}\pi r^3 = \frac{q}{R^3} r^3$$
+$\quad$高斯定理:
+$$E_{\text{内}}(r) \cdot 4\pi r^2 = \frac{Q_{\text{内}}(r)}{\varepsilon_0}= \frac{q r}{4\pi\varepsilon_0 R^3}$$
+
+
+
+
+静电能
+
+$$U = \frac{1}{2} \int_{\text{全空间}} \varepsilon_0 E^2  dV$$
+
+球内部分 $ 0 \le r \le R $
+$$E_{\text{内}}^2 = \left( \frac{q r}{4\pi\varepsilon_0 R^3} \right)^2= \frac{q^2 r^2}{16\pi^2 \varepsilon_0^2 R^6}$$
+
+$$U_{\text{内}} = \frac{1}{2} \varepsilon_0 \int_0^R \left[ \frac{q^2 r^2}{16\pi^2 \varepsilon_0^2 R^6} \right] \cdot 4\pi r^2  dr\quad dV = 4\pi r^2 dr $$
+
+$$U_{\text{内}} = \frac{1}{2} \varepsilon_0 \cdot \frac{q^2}{16\pi^2 \varepsilon_0^2 R^6} \cdot 4\pi \int_0^R r^4  dr= \frac{q^2}{8\pi \varepsilon_0 R^6} \int_0^R r^4  dr= \frac{q^2}{40\pi \varepsilon_0 R}$$
+
+
+
+球外部分 $ R \le r < \infty $
+$$E_{\text{外}}^2 = \frac{q^2}{(4\pi\varepsilon_0)^2 r^4}$$
+$$U_{\text{外}} = \frac{1}{2} \varepsilon_0 \int_R^\infty \left[ \frac{q^2}{16\pi^2 \varepsilon_0^2 r^4} \right] \cdot 4\pi r^2  dr= \frac{q^2}{8\pi \varepsilon_0} \int_R^\infty \frac{dr}{r^2}= \frac{q^2}{8\pi \varepsilon_0} \cdot \frac{1}{R}$$
+
+
+$$U = U_{\text{内}} + U_{\text{外}}= \frac{q^2}{40\pi \varepsilon_0 R} + \frac{q^2}{8\pi \varepsilon_0 R}= \frac{3q^2}{20\pi \varepsilon_0 R}$$
+
+
+\newpage
+
+设球面稍有膨胀($R\to R+\delta R$)
+
+$$U(R) = \frac{Q^2}{8\pi\varepsilon_0 R}\qquad \delta U = \frac{dU}{dR} \delta R= -\frac{Q^2}{8\pi\varepsilon_0 R^2} \delta R$$
+
+电场力做功
+静电能减少量等于电场力做的功:
+$$\delta A_{\text{电场力}} = -\delta U\qquad \delta A = \frac{Q^2}{8\pi\varepsilon_0 R^2} \delta R$$
+
+设球壳单位面积受到的向外静电力为 $ f $
+
+当半径增加 $\delta R$ 时，总表面积 $ S = 4\pi R^2 $，面积变化 $\delta S = 8\pi R \delta R$。
+
+电场力做功:
+$$\delta A = f \cdot S \cdot \delta R$$
+
+球壳上每块面积元 $ dS $ 受力 $ f \, dS $，方向沿径向向外
+
+当半径增加 $\delta R$，该面积元位移 $\delta R$，做功 $ f \, dS \cdot \delta R $，对整个球面积分:
+$$\delta A = f \cdot (4\pi R^2) \cdot \delta R$$
+$$f \cdot 4\pi R^2 \cdot \delta R = \frac{Q^2}{8\pi\varepsilon_0 R^2} \delta R\qquad f = \frac{Q^2}{32\pi^2 \varepsilon_0 R^4}$$
+
+
+$$Q = \sigma_e \cdot 4\pi R^2\qquad Q^2 = 16\pi^2 R^4 \sigma_e^2 \qquad \qquad \quad $$
+
+$$f = \frac{16\pi^2 R^4 \sigma_e^2}{32\pi^2 \varepsilon_0 R^4}= \frac{\sigma_e^2}{2\varepsilon_0}$$
+
+\newpage
+
+$$W_\text{互}=A^{\prime}=\frac{1}{2}(q_1U_{21}+q_2U_{12})=\frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r_{12}}$$
+
+$$A'=A_1^{\prime}+A_2^{\prime}+\cdots+A_n^{\prime}=\sum_{i=1}A_i^{\prime}=\sum_{i=1}^nq_i\sum_{j=1}^{i-1}U_{ji}=\frac{1}{4\pi\varepsilon_0}\sum_{i=1}^n\sum_{j=1}^{i-1}\frac{q_iq_j}{r_{ij}}$$
+
+$$A^{\prime}=\frac{1}{2}\sum_{i=1}^nq_i\left[\sum_{j=1,j \neq i}^nU_{ji}\right]=\frac{1}{8\pi\varepsilon_0}\sum_{i=1}^n\sum_{j=1,j \neq i}^n\frac{q_iq_j}{r_{ij}}$$
+
+$$A^{\prime}=\frac{1}{2}\sum_{i=1}^nq_iU_i$$
+
+$$W_\text{互}=\frac{1}{2}\sum_{i=1}^nq_iU_i$$
+
+$$W_e=\frac{1}{2}\iiint_V\rho_eU\mathrm{d}V$$
+
+
+
+\newpage
+
+
+
+ 一、名词解释
+
+ 1. 电荷:电荷是物质的一种基本物理属性，能够吸引轻小物体。电荷分为正电荷和负电荷
+
+ 2. 带电体:带电的物体
+
+ 3. 自由电子:在金属导体中，脱离原子核束缚、可在晶格中自由移动的电子
+
+ 4. 束缚电荷:在绝缘体中，受原子核束缚、不能自由移动的电荷分布
+
+ 5. 载流子:在导电介质中能够自由移动、形成电流的带电粒子。在半导体中是电子和空穴
+
+ 6. 静电场:由静止电荷在其周围空间产生的一种物质形态$ \vec{E} = \frac{\vec{F}}{q_0} $
+
+ 7. 试探电荷:为了测量电场中某点的性质而引入的电荷,电量足够小，以免影响原电场的分布，可视为点电荷
+
+ 8. 矢量场:空间中存在一个函数决定了矢量分布,这个分布即为矢量场
+
+ 9. 电场强度叠加原理:多个点电荷在某点产生的总电场强度，等于各个点电荷单独存在时在该点产生的电场强度的矢量和。$ \vec{E} = \sum_{i=1}^n \vec{E}_i = \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^n \frac{q_i}{r_i^2} \hat{r}_i $。
+
+ 10. 电偶极子:由一对等量异号、相距 $ l $ 的点电荷组成的系统。电偶极矩 $ \vec{p} = q \vec{l} $，
+
+ 11. 源点与场点:
+源点:产生电场的电荷所在的位置。
+场点:待求电场或电势的空间位置点。
+
+
+ 12. 电通量:通过某一曲面的电场线条数
+
+ 13. 电势差:静电场中 $ a, b $ 两点间的电势差 $ U_{ab} $ 等于将单位正电荷从 $ a $ 点移动到 $ b $ 点，电场力所做的功的负值（或外力克服电场力所做的功）。$ U_{ab} = U_a - U_b = -\int_a^b \vec{E} \cdot d\vec{l} = \frac{W_{ab}}{q_0} $。
+
+ 14. 电势:静电场中某点的电势 $ U $为将单位正电荷从该点移动到电势零点（通常取无穷远）时，电场力所做的功的负值。电势是标量场。$ U_a = -\int_a^{\infty} \vec{E} \cdot d\vec{l} $。点电荷电势 $ U = \frac{q}{4\pi\varepsilon_0 r} $。
+
+ 15. 等势面:静电场中电势相等的点所构成的曲面。
+
+ 16. 梯度:梯度是一个矢量算子，作用于标量场 $ U $，其方向指向该标量场增加最快的方向，大小等于该方向上的方向导数。在静电场中，电场强度等于电势梯度的负值。
+$ \vec{E} = -\nabla U = -\left( \frac{\partial U}{\partial x} \hat{i} + \frac{\partial U}{\partial y} \hat{j} + \frac{\partial U}{\partial z} \hat{k} \right) $。
+
+
+\newpage
+ 二、简答题
+
+ 1. 电荷守恒定律:在一个与外界没有电荷交换的孤立系统中，系统的总电荷量（正负电荷的代数和）始终保持不变。
+
+ 2. 库仑定律:在真空中，两个静止点电荷之间的相互作用力的大小与它们的电荷量的乘积成正比，与它们之间距离的平方成反比；作用力的方向沿着它们的连线，同种电荷相斥，异种电荷相吸。
+$$
+\vec{F}_{12} = \frac{1}{4\pi\varepsilon_0} \frac{q_1 q_2}{r_{12}^2} \hat{r}_{12}
+$$
+ 3. 高斯定理:通过任意闭合曲面（高斯面）的电通量，等于该闭合曲面内所包围的净电荷量除以真空介电常数 $ \varepsilon_0 $。
+$$
+\oint_S \vec{E} \cdot d\vec{S} = \frac{Q_{\text{内}}}{\varepsilon_0}
+$$
+ 4. 静电场电场线特性:
+
+电场线上每一点的切线方向与该点的电场强度方向一致。
+
+电场线的疏密程度表示该处电场强度的大小。
+
+电场线起始于正电荷（或无穷远），终止于负电荷（或无穷远）
+
+电场线不会相交。
+
+电场线闭合。
+
+
+ 5. 保守力:做功与路径无关，只与起点和终点位置有关的力。沿任意闭合路径做功为零的力。$ \oint_L \vec{F} \cdot d\vec{l} = 0 $。
+
+ 6. 静电场力做功特点:试探电荷在静电场中移动时，电场力所做的功只与试探电荷的起点和终点位置有关，而与所经过的路径无关。
+ 
+ $W_{ab} = q_0 \int_a^b \vec{E} \cdot d\vec{l} = q_0 (U_a - U_b) $。
+
+ 7. 电势叠加原理:多个点电荷在某点产生的总电势，等于各个点电荷单独存在时在该点产生的电势的代数和。因为电势是标量，所以叠加是代数相加。$ U = \sum_{i=1}^n U_i = \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^n \frac{q_i}{r_i} $。
+
+ 8. 带电体系的静电能:带电体系的静电能等于把体系中的所有电荷从彼此无限远离的状态，聚集到当前状态时，外力需要克服静电力所做的总功。
+
+点电荷系的相互作用能:$ W_{\text{互}} = \frac{1}{2} \sum_{i=1}^n q_i U_i $，其中 $ U_i $ 是除 $ q_i $ 外所有其他电荷在 $ q_i $ 处产生的电势。
+
+连续电荷分布的总静电能:$ W_e = \frac{1}{2} \iiint_V \rho U \, dV $，其中 $ U $ 为总电势。
+
+电场能量表述:$ W_e = \frac{1}{2} \varepsilon_0 \iiint_{\text{全空间}} E^2 \, dV $。
+
+\end{document}

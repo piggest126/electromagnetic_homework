@@ -1,0 +1,550 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{unicode-math}
+\usetikzlibrary{arrows.meta, decorations.markings,patterns}
+\begin{document}
+
+简答题
+
+1.
+
+
+(a).电场力做正功,正电荷的电势能减少,P点电势高
+
+(b).电场力做负功,正电荷的电势能增加,Q点电势高
+
+
+
+\vspace{4em}
+2.
+
+%2.若A,B两个导体都带负电,但是A比B的电势高,现在用细导线将A,B连接起来,请分析细导线中电流的流向并简要说明理由
+
+用导线连接后,电流从电势高的导体流向电势低的导体,即从 A 流向 B。  
+
+理由: 
+
+电流方向定义为正电荷移动的方向或等效为正电流方向
+
+导体带负电,说明导体上有多余的负电荷。  
+
+对于负电荷,电势越高,电势能越低
+
+电势高的地方A相对于电势低的地方B,负电荷的电势能更低。  
+
+电子在电场力作用下会从电势低处移向电势高处,即从 B 向 A 移动。
+
+电子移动方向与电流方向相反,因此电流方向是从 A 到 B。  
+
+
+
+
+\newpage
+
+3
+
+%3.简要推导并写出直角坐标系,球坐标系和柱坐标系中梯度算符的表达式。
+
+
+ (1). 直角坐标系  
+直角坐标 $(x, y, z)$,三个单位矢量 $\mathbf{e}_x, \mathbf{e}_y, \mathbf{e}_z$ 是常矢量。  
+标量函数 $f(x, y, z)$ 的全微分:  
+
+$$df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy + \frac{\partial f}{\partial z} dz$$  
+
+而梯度定义$df = \nabla f \cdot d\mathbf{r}$,其中 $d\mathbf{r} = dx\,\mathbf{e}_x + dy\,\mathbf{e}_y + dz\,\mathbf{e}_z$。可得:  
+
+$$\nabla f = \frac{\partial f}{\partial x} \mathbf{e}_x + \frac{\partial f}{\partial y} \mathbf{e}_y + \frac{\partial f}{\partial z} \mathbf{e}_z$$  
+
+所以梯度算符为:  
+
+$$\nabla = \mathbf{e}_x \frac{\partial}{\partial x} + \mathbf{e}_y \frac{\partial}{\partial y} + \mathbf{e}_z \frac{\partial}{\partial z}$$  
+
+
+
+ (2). 球坐标系  
+球坐标 $(r, \theta, \phi)$,其中:  
+$$x = r \sin\theta \cos\phi, \quad y = r \sin\theta \sin\phi, \quad z = r \cos\theta$$  
+
+单位矢量 $\mathbf{e}_r, \mathbf{e}_\theta, \mathbf{e}_\phi$ 与位置有关。 
+
+弧长元素:  
+
+$$d\mathbf{r} = dr\,\mathbf{e}_r + r\,d\theta\,\mathbf{e}_\theta + r\sin\theta\,d\phi\,\mathbf{e}_\phi$$  
+
+设 $f(r, \theta, \phi)$,全微分:  
+
+$$df = \frac{\partial f}{\partial r} dr + \frac{\partial f}{\partial \theta} d\theta + \frac{\partial f}{\partial \phi} d\phi$$  
+
+用 $d\mathbf{r}$ 的分量表示 $dr, d\theta, d\phi$:  
+
+$$dr = \mathbf{e}_r \cdot d\mathbf{r}, \quad r\,d\theta = \mathbf{e}_\theta \cdot d\mathbf{r}, \quad r\sin\theta\,d\phi = \mathbf{e}_\phi \cdot d\mathbf{r}$$  
+
+代入 $df$:  
+
+$$df = \frac{\partial f}{\partial r} (\mathbf{e}_r \cdot d\mathbf{r}) + \frac{1}{r} \frac{\partial f}{\partial \theta} (\mathbf{e}_\theta \cdot d\mathbf{r}) + \frac{1}{r\sin\theta} \frac{\partial f}{\partial \phi} (\mathbf{e}_\phi \cdot d\mathbf{r})$$  
+
+$$\nabla f = \frac{\partial f}{\partial r} \mathbf{e}_r + \frac{1}{r} \frac{\partial f}{\partial \theta} \mathbf{e}_\theta + \frac{1}{r\sin\theta} \frac{\partial f}{\partial \phi} \mathbf{e}_\phi$$  
+
+$$\nabla = \mathbf{e}_r \frac{\partial}{\partial r} + \mathbf{e}_\theta \frac{1}{r} \frac{\partial}{\partial \theta} + \mathbf{e}_\phi \frac{1}{r\sin\theta} \frac{\partial}{\partial \phi}$$  
+
+
+
+ (3). 柱坐标系  
+柱坐标 $(\rho, \phi, z)$,其中:  
+$$x = \rho \cos\phi, \quad y = \rho \sin\phi, \quad z = z$$  
+单位矢量 $\mathbf{e}_\rho, \mathbf{e}_\phi, \mathbf{e}_z$。  
+
+弧长元素:  
+
+$$d\mathbf{r} = d\rho\,\mathbf{e}_\rho + \rho\,d\phi\,\mathbf{e}_\phi + dz\,\mathbf{e}_z$$  
+
+设 $f(\rho, \phi, z)$,全微分:  
+
+$$df = \frac{\partial f}{\partial \rho} d\rho + \frac{\partial f}{\partial \phi} d\phi + \frac{\partial f}{\partial z} dz$$  
+
+用 $d\mathbf{r}$ 的分量:  
+$$d\rho = \mathbf{e}_\rho \cdot d\mathbf{r}, \quad \rho\,d\phi = \mathbf{e}_\phi \cdot d\mathbf{r}, \quad dz = \mathbf{e}_z \cdot d\mathbf{r}$$  
+ 
+$$df = \frac{\partial f}{\partial \rho} (\mathbf{e}_\rho \cdot d\mathbf{r}) + \frac{1}{\rho} \frac{\partial f}{\partial \phi} (\mathbf{e}_\phi \cdot d\mathbf{r}) + \frac{\partial f}{\partial z} (\mathbf{e}_z \cdot d\mathbf{r})$$  
+  
+
+$$\nabla f = \frac{\partial f}{\partial \rho} \mathbf{e}_\rho + \frac{1}{\rho} \frac{\partial f}{\partial \phi} \mathbf{e}_\phi + \frac{\partial f}{\partial z} \mathbf{e}_z$$  
+
+
+$$\nabla = \mathbf{e}_\rho \frac{\partial}{\partial \rho} + \mathbf{e}_\phi \frac{1}{\rho} \frac{\partial}{\partial \phi} + \mathbf{e}_z \frac{\partial}{\partial z}$$  
+
+
+
+\vspace{1em}
+
+直角坐标:$\displaystyle \nabla = \mathbf{e}_x \frac{\partial}{\partial x} + \mathbf{e}_y \frac{\partial}{\partial y} + \mathbf{e}_z \frac{\partial}{\partial z}$  
+
+\vspace{1em}
+
+球坐标:$\displaystyle \nabla = \mathbf{e}_r \frac{\partial}{\partial r} + \mathbf{e}_\theta \frac{1}{r} \frac{\partial}{\partial \theta} + \mathbf{e}_\phi \frac{1}{r\sin\theta} \frac{\partial}{\partial \phi}$  
+
+\vspace{1em}
+
+柱坐标:$\displaystyle \nabla = \mathbf{e}_\rho \frac{\partial}{\partial \rho} + \mathbf{e}_\phi \frac{1}{\rho} \frac{\partial}{\partial \phi} + \mathbf{e}_z \frac{\partial}{\partial z}$
+
+
+\newpage
+计算题
+
+1.4-2
+
+%1.4-2 已知空气的击穿场强为 $2\times10^6$V/m,测得某次闪电的火花长 100 m,求发生这次闪电时两端的电势差
+
+空气击穿场强 $ E_{\text{max}} = 2 \times 10^6 \, \text{V/m} $  
+闪电火花长度 $ d = 100 \, \text{m} $  
+ 
+当空气被击穿时,电场强度达到击穿场强
+
+此时可近似认为闪电路径上的电场是均匀的。  
+
+电势差与电场强度的关系(均匀电场):  
+$$U = E \cdot d$$   
+$$U = (2 \times 10^6 \, \text{V/m}) \times (100 \, \text{m})$$  
+$$U = 2 \times 10^8 \, \text{V}$$  
+
+
+\vspace{4em}
+
+1.4-3
+
+%1.4-3 证明:在真空静电场中凡是电场线都是平行直线的地方,电场强度的大小必定处处相等；或者换句话说,凡是电场强度的方向处处相同的地方,电场强度的大小必定处处相等
+
+%(提示:利用高斯定理和做功与路径无关的性质,分别证明沿同一电场线和沿同一等势面上两点的场强相等.)
+
+
+证明同一电场线上任意两点场强大小相等
+
+取高斯面为柱形,轴线与电场线平行,两底面面积为$S$。由高斯定理
+$$\oiint \vec{E} \cdot d\vec{S} = \frac{q}{\varepsilon_0}$$
+
+q = 0,侧面$\vec{E} \cdot d\vec{S} = 0$,底面:$\vec{E} \cdot d\vec{S} = E_1 S - E_2 S$,
+
+则$E_1 S - E_2 S = 0$,故$E_1 = E_2$。
+
+证明不同电场线上任意两点场强大小相等
+
+取矩形闭合环路$ABCD$,$AB$,$CD$与电场线平行,$BC \bot DA$。
+
+由环路定理$\oint \vec{E} \cdot d\vec{l} = 0$,
+
+垂直方向$\vec{E} \cdot d\vec{l} = 0$,平行方向$\vec{E} \cdot d\vec{l} = E_1 L - E_2 L$,
+
+则$E_1 L - E_2 L = 0$,故$E_1 = E_2$。
+
+综上所述,平行直线电场中任意两点场强大小均相等,即电场强度大小处处相等。
+
+
+
+
+\newpage
+
+1.4-8
+
+%1.4-8 如题图所示 $,AB=2l,\widehat{OCD}$ 是以 $B$ 为中心 $,l$ 为半径的半圆$.A$ 点有正点电荷$+q,B$ 点有负点电荷$-q.$
+
+%(1)把单位正电荷从$O$点沿$\widehat{OCD}$移到$D$点,电场力对它做了多少功？
+
+%(2) 把 单 位 负 电 荷 从$D$点沿$AB$的延长线移到无穷远去,电场力对它做了多少功？
+
+
+设$O$(0,0);$A$ 点:$+q$,位于$(-l,0)$;$B$ 点:$-q$,位于$B(l,0)$。
+
+ $\widehat{OCD}$ 是以 $B$ 为中心,$l$ 为半径的半圆,$D(2l,0)$
+
+
+设无穷远为电势零点。
+
+点电荷 $q$ 在距离 $r$ 处的电势:$U = \frac{q}{4\pi\varepsilon_0 r}$。
+
+对于两个点电荷系统:
+$$U(x,y) = \frac{1}{4\pi\varepsilon_0} \left[ \frac{q}{\sqrt{(x+l)^2 + y^2}} + \frac{-q}{\sqrt{(x-l)^2 + y^2}} \right]$$
+
+
+(1) 单位正电荷从 $O$ 沿 $\widehat{OCD}$ 到 $D$ 电场力做功
+
+静电场力做功与路径无关,只与电势差有关:
+$$W_{O\to D} = q \times (U_O - U_D)$$
+\qquad 这里 $q = +1$(单位正电荷)。
+
+先算 $U_O$:  
+$O(0,0)$ 到 $A$ 距离 $l$,到 $B$ 距离 $l$:
+$$U_O = \frac{1}{4\pi\varepsilon_0} \left[ \frac{q}{l} + \frac{-q}{l} \right] = 0$$
+
+$D(2l,0)$ 到 $A$ 距离:$\sqrt{(2l+l)^2} = 3l$ ,到 $B$ 距离:$\sqrt{(2l-l)^2} = l$
+
+$$
+U_D = \frac{1}{4\pi\varepsilon_0} \left[ \frac{q}{3l} + \frac{-q}{l} \right]
+= \frac{q}{4\pi\varepsilon_0 l} \left[ \frac{1}{3} - 1 \right]
+= \frac{q}{4\pi\varepsilon_0 l} \cdot \left( -\frac{2}{3} \right)
+= -\frac{q}{6\pi\varepsilon_0 l}
+$$
+
+$$W_{O\to D} = (+1) \times (U_O - U_D) = 0 - \left( -\frac{q}{6\pi\varepsilon_0 l} \right) = \frac{q}{6\pi\varepsilon_0 l}$$
+
+\vspace{1em}
+(2) 无穷远为电势零点,
+
+电场力做功:$U_\infty = 0$
+$$W_{D\to\infty} = q_t \times (U_D - U_\infty)$$
+$$W_{D\to\infty} = (-1) \times (U_D - 0) = -U_D$$
+$$U_D = -\frac{q}{6\pi\varepsilon_0 l}$$
+$$W_{D\to\infty} = -\left( -\frac{q}{6\pi\varepsilon_0 l} \right) = \frac{q}{6\pi\varepsilon_0 l}$$
+
+
+
+
+
+\newpage
+
+1.4-14
+
+%1.4-14求习题 1.2-12 中均匀带电圆环轴线上的电势分布 ,并画出$U-x$曲线
+
+取同一电荷元 $ dq $,它在 $ P $ 点的电势  
+$$dU = \frac{1}{4\pi\varepsilon_0} \frac{dq}{r}$$
+
+其中 $ r = \sqrt{R^2 + x^2} $ 对所有 $ dq $ 相同
+
+$$U(x) = \int d = \frac{1}{4\pi\varepsilon_0} \frac{1}{\sqrt{R^2 + x^2}} \int dq$$
+$$U(x) = \frac{1}{4\pi\varepsilon_0} \frac{q}{\sqrt{R^2 + x^2}}$$
+
+\begin{tikzpicture}[scale=1.5]
+  % 坐标轴
+  \draw[->] (-3.5,0) -- (3.5,0) node[right] {$x$};
+  \draw[->] (0,-0.2) -- (0,2.5) node[above] {$U(x)$};
+  \node[below left] at (0,0) {$O$};
+  \node[below] at (1,0) {$R$};
+  \node[below] at (-1,0) {$-R$};
+  \draw[dashed] (1,0) -- (1,1.414) ( -1,0) -- (-1,1.414);
+  
+  % 标注 U(0)
+  \draw[dashed] (0,2) -- (0,0);
+  \filldraw[black] (0,2) circle (1pt);
+  \node[left] at (0,2.2) {$\dfrac{q}{4\pi\varepsilon_0 R}$};
+
+  
+  % 曲线 U(x) = 1/sqrt(1+x^2)  (取 R=1, q/(4πε₀)=1 归一化)
+  \draw[thick, blue, domain=-3:3, samples=100, smooth] 
+    plot (\x, {2/sqrt(1+(\x)^2)});
+  
+  % 标注
+  \node[blue, above] at (2,0.9) {$U(x)=\dfrac{q}{4\pi\varepsilon_0\sqrt{R^2+x^2}}$};
+\end{tikzpicture}
+
+
+
+\newpage
+
+1.4-15
+
+%1.4-15求习题 1.2-13中均匀带电圆面轴线上的电势分布 ,并画出$U-x$ 曲线.
+
+设圆盘在 $ x-y $ 平面内,圆心在原点,半径 $ R $,电荷面密度 $ \sigma_e $。
+
+在圆盘上取一个半径为 $ r $、宽度为 $ dr $ 的细圆环($ 0 \le r \le R $)
+
+该圆环的电荷量:$dq = \sigma_e \cdot 2\pi r  dr$
+
+由上一题已知,一个半径为 $ r $、电荷 $ dq $ 的圆环在轴线上点 $ P(0,0,x) $(这里 $ x $ 是轴线上点到圆盘中心的距离)的电势为:
+
+$$dU = \frac{1}{4\pi\varepsilon_0} \frac{dq}{\sqrt{r^2 + x^2}}$$
+
+代入 $ dq $:
+
+$$dU = \frac{1}{4\pi\varepsilon_0} \frac{\sigma_e \cdot 2\pi r \, dr}{\sqrt{r^2 + x^2}}
+= \frac{\sigma_e}{2\varepsilon_0} \frac{r \, dr}{\sqrt{r^2 + x^2}}$$
+
+对 $ r $ 从 $ 0 $ 到 $ R $ 积分:
+
+$$U(x) = \frac{\sigma_e}{2\varepsilon_0} \int_{0}^{R} \frac{r \, dr}{\sqrt{r^2 + x^2}}$$
+
+令 $ p = r^2 + x^2 $,则 $ dp = 2rdr $,即 $ rdr = \frac{dp}{2} $。
+
+$$U(x) = \frac{\sigma_e}{2\varepsilon_0} \cdot \frac12 \int_{p(0)}^{p(R)} \frac{dp}{\sqrt{p}}\qquad p(0) = x^2, \quad p(R) = R^2 + x^2$$
+
+$$U(x) = \frac{\sigma_e}{4\varepsilon_0} 2\sqrt{p}| _{x^2}^{R^2 + x^2}$$
+
+因此:
+
+$$U(x) = \frac{\sigma_e}{2\varepsilon_0} \left( \sqrt{R^2 + x^2} - |x| \right)$$
+
+
+\begin{tikzpicture}[scale=1.5]
+  % 坐标轴
+  \draw[->] (-3.5,0) -- (3.5,0) node[right] {$x$};
+  \draw[->] (0,-0.2) -- (0,2.5) node[above] {$U(x)$};
+  \node[below left] at (0,0) {$O$};
+  \node[below] at (1,0) {$R$};
+  \node[below] at (-1,0) {$-R$};
+  
+  % 标注 U(0)
+  \draw[dashed] (0,1.5) -- (0,0);
+  \node[left] at (0,1.5) {$\dfrac{\sigma_e R}{2\varepsilon_0}$};
+  
+  % 曲线 U(x) = sqrt(1+x^2) - |x|  (取 R=1, σ_e/(2ε₀)=1 归一化)
+  \draw[thick, blue, domain=-3:3, samples=200, smooth] 
+    plot (\x, {sqrt(1+(\x)^2) - abs(\x)});
+  
+  % 标注
+  \node[blue, above] at (2,0.4) 
+    {$U(x)=\dfrac{\sigma_e}{2\varepsilon_0}\bigl(\sqrt{R^2+x^2}-|x|\bigr)$};
+ 
+\end{tikzpicture}
+
+
+\newpage
+
+1.4-16
+
+%1.4-16求习题 1.3-3中同心球面在I,II,III三个区域内的电势分布,并画出 $U-r$曲线
+取球形高斯面,半径为 $ r $,由对称性,电场沿径向,大小只与 $ r $ 有关。
+
+高斯定理:
+$$\oiint \mathbf{E} \cdot d\mathbf{S} = \frac{Q}{\varepsilon_0}$$
+
+$$E(r) \cdot 4\pi r^2 = \frac{Q}{\varepsilon_0}$$
+
+$$E(r) = \frac{Q}{4\pi\varepsilon_0 r^2}$$
+
+区域 I($ r < R_1 $):  
+高斯面内无电荷,$ Q = 0 $
+
+$$E_I(r) = 0$$
+
+区域 II($ R_1 < r < R_2 $):  
+
+高斯面内只有内球面的电荷 $ Q_1 $ 
+
+$$E_{\text{II}}(r) = \frac{Q_1}{4\pi\varepsilon_0 r^2}$$
+
+区域 III($ r > R_2 $):  
+高斯面内总电荷 $ Q_1 + Q_2 $  
+
+$$E_{\text{III}}(r) = \frac{Q_1 + Q_2}{4\pi\varepsilon_0 r^2}$$
+
+电势分布
+
+取无穷远处电势为零 $ U(\infty) = 0 $
+
+$$U(r) = \int_{r}^{\infty} E(r')  dr'$$
+
+(1) 区域 III($ r \ge R_2 $):  
+$$U_{\text{III}}(r) = \int_{r}^{\infty} \frac{Q_1 + Q_2}{4\pi\varepsilon_0 r'^2} \, dr'= \frac{Q_1 + Q_2}{4\pi\varepsilon_0 r}$$
+
+(2) 区域 II($ R_1 \le r \le R_2 $):  
+从 $ r $ 到 $ R_2 $ 用 $ E_{\text{II}} $,从 $ R_2 $ 到 $ \infty $ 用 $ E_{\text{III}} $:
+$$U_{\text{II}}(r) = \int_{r}^{R_2} \frac{Q_1}{4\pi\varepsilon_0 r'^2} \, dr' + U_{\text{III}}(R_2)$$
+
+$$= \frac{Q_1}{4\pi\varepsilon_0} \left( \frac{1}{r} - \frac{1}{R_2} \right) + \frac{Q_1 + Q_2}{4\pi\varepsilon_0 R_2}= \frac{Q_1}{4\pi\varepsilon_0 r} + \frac{Q_2}{4\pi\varepsilon_0 R_2}$$
+
+(3) 区域 I($ 0 \le r \le R_1 $):  
+从 $ r $ 到 $ R_1 $ 用 $ E_{\text{I}} = 0 $,所以电势等于 $ U_{\text{I}}(R_1) $:
+
+$$U_{\text{I}}(r) = U_{\text{II}}(R_1) = \frac{Q_1}{4\pi\varepsilon_0 R_1} + \frac{Q_2}{4\pi\varepsilon_0 R_2}$$
+
+$$\quad\begin{cases}U_I=\frac{1}{4\pi\varepsilon_0}\left(\frac{Q_1}{R_1}+\frac{Q_2}{R_2}\right),\\\\U_{II}=\frac{1}{4\pi\varepsilon_0}\left(\frac{Q_1}{r}+\frac{Q_2}{R_2}\right),\\\\U_{III}=\frac{1}{4\pi\varepsilon_0}\frac{Q_1+Q_2}{r}.&\end{cases}$$
+
+\begin{tikzpicture}[scale=1.8]
+  % 坐标轴
+  \draw[->] (0,0) -- (4,0) node[right] {$r$};
+  \draw[->] (0,0) -- (0,3) node[above] {$U(r)$};
+  \node[below] at (1,0) {$R_1$};
+  \node[below] at (2,0) {$R_2$};
+  \node[below left] at (0,0) {$O$};
+  
+  % 假设 Q1=2, Q2=1 以便画图
+  \def\Qone{2}
+  \def\Qtwo{1}
+  \def\Rone{1}
+  \def\Rtwo{2}
+  
+  % 电势公式
+  % 区域 I: U = Q1/R1 + Q2/R2 = 2/1 + 1/2 = 2.5
+  % 区域 II: U = Q1/r + Q2/R2 = 2/r + 0.5
+  % 区域 III: U = (Q1+Q2)/r = 3/r
+  
+  % 画曲线
+  \draw[thick, blue] (0,2.5) -- (1,2.5);  % 区域 I
+  \draw[thick, blue, domain=1:2, samples=50, smooth] 
+    plot (\x, {2/\x + 0.5});  % 区域 II
+  \draw[thick, blue, domain=2:3.8, samples=50, smooth] 
+    plot (\x, {3/\x});  % 区域 III
+  
+  % 标注
+  \draw[dashed] (1,0) -- (1,2.5);
+  \draw[dashed] (2,0) -- (2,1.5);
+  \node[left] at (0,2.5) {$\dfrac{Q_1}{4\pi\varepsilon_0 R_1} + \dfrac{Q_2}{4\pi\varepsilon_0 R_2}$};
+  \node[right] at (3,1.2) {$\dfrac{Q_1+Q_2}{4\pi\varepsilon_0 r}$};
+  \node[above] at (2,2) {$\dfrac{Q_1}{4\pi\varepsilon_0 r} + \dfrac{Q_2}{4\pi\varepsilon_0 R_2}$};
+  
+  % 点
+  \fill (1,2.5) circle (1.5pt);
+  \fill (2,1.5) circle (1.5pt);
+\end{tikzpicture}
+
+
+
+\newpage
+
+1.4-27
+
+%1.4-27 如题图所示,两条均匀带电的无限长平行直线(与图纸垂直),电荷线密度分别为$\pm\eta_e$,相距为$2a$,求空间任一点$P(x,y)$的电势.
+
+对于一根无限长带电直线,取一个半径为 $r$、高为 $h$ 的闭合圆柱面作为高斯面,轴线与带电直线重合。
+
+该闭合面包括:
+侧面 $S_1$:圆柱侧面,面积 $2\pi r h$,
+上底面 $S_2$ 与下底面 $S_3$
+
+由对称性,电场 $E$ 只有径向分量,且大小只依赖于 $r$:
+
+在侧面 $S_1$ 上,$\mathbf{E} \cdot d\mathbf{S} = E(r)dS$。
+在底面,电通量为0
+
+所以总电通量:
+
+$$\Phi_E = \oiint \mathbf{E} \cdot d\mathbf{A} = E(r) \cdot (2\pi r h).$$
+
+高斯定律
+$$\Phi_E = \frac{Q}{\varepsilon_0}$$
+
+圆柱内包围的电荷:
+$$Q = \lambda h.$$
+$$E(r) \cdot (2\pi r h) = \frac{\lambda h}{\varepsilon_0}.$$
+$$E(r) = \frac{\lambda}{2\pi \varepsilon_0  r}.$$
+
+$$U(r)-U(r_0)=-\int_{r_0}^r\mathbf{E}\cdot d\mathbf{r}=-\frac{\lambda}{2\pi\varepsilon_0}\int_{r_0}^r\frac{dr}{r}=-\frac{\lambda}{2\pi\varepsilon_0}\ln\frac{r}{r_0}$$
+
+\vspace{1em}
+
+\begin{minipage}[b]{0.46\linewidth}
+
+对于 $+\eta_e$ 直线,距离  
+$$r_1 = \sqrt{(x-a)^2 + y^2},$$
+  
+$$U_1 = -\frac{\eta_e}{2\pi\varepsilon_0} \ln\frac{r_1}{r_0}.$$
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.46\linewidth}
+对于 $-\eta_e$ 直线,距离  
+$$r_2 = \sqrt{(x+a)^2 + y^2},$$
+
+$$U_2 = +\frac{\eta_e}{2\pi\varepsilon_0} \ln\frac{r_2}{r_0}.$$
+\end{minipage}
+
+\vspace{1em}
+
+总电势  
+$$U(x,y) = V_1 + V_2 = \frac{\eta_e}{2\pi\varepsilon_0} \ln\frac{r_2}{r_1}.$$
+
+代入 $r_1, r_2$,得  
+$$U(x,y) = \frac{\eta_e}{2\pi\varepsilon_0} \ln\left( \frac{\sqrt{(x+a)^2 + y^2}}{\sqrt{(x-a)^2 + y^2}} \right)=U(x,y)=\frac{\eta_e}{4\pi\varepsilon_0}\ln\frac{\left(x+a\right)^2+y^2}{\left(x-a\right)^2+y^2}$$
+
+
+
+
+
+\newpage
+
+1.4-34
+
+%1.4-34 证明习题 1.3-14 的突变型 pn 结内电势的分布为
+
+%$$\begin{cases}\text{n 区 },U(x)=-\frac{N_\text{D}e}{\varepsilon_0}\biggl(x_\text{n}x+\frac12x^2\biggr)\:,\\\\\text{p 区 },U(x)=-\frac{N_\text{A}e}{\varepsilon_0}\biggl(x_\text{p}x-\frac12x^2\biggr)\:,\end{cases}$$
+
+%这公式是以哪里作为电势参考点的? pn 结两侧的电势差为多少?
+
+
+由习题 1.3-14 已得:
+
+$$E(x)=\begin{cases}\frac{N_De}{\varepsilon_0}(x_n+x),\quad-x_n\leq x\leq0\quad\text{(n区)}\\\frac{N_Ae}{\varepsilon_0}(x_p-x),\quad0\leq x\leq x_p\quad\text{(p区)}&\end{cases}$$
+
+且 $N_A x_p = N_D x_n$。
+
+电势 $U(x)$ 与电场关系:
+$$E(x) = -\frac{dU}{dx}$$
+
+积分求电势分布
+
+n 区（$-x_n \le x \le 0$）
+$$-\frac{dU}{dx} = \frac{N_D e}{\varepsilon_0} (x_n + x)$$
+积分:
+$$U(x) = -\frac{N_D e}{\varepsilon_0} \left( x_n x + \frac12 x^2 \right) + U_1$$
+
+ p 区（$0 \le x \le x_p$）
+$$-\frac{dU}{dx} = \frac{N_A e}{\varepsilon_0} (x_p - x)$$
+积分:
+$$U(x) = -\frac{N_A e}{\varepsilon_0} \left( x_p x - \frac12 x^2 \right) + U_2$$
+
+在 $x=0$ 处电势连续:
+$$U(0^-) = U(0^+)$$
+$$U_1 = U_2$$
+
+题目给出的公式中不含常数项 ,因此电势参考点为 $x=0$ 处, $U(0) = 0$。  
+
+$$\begin{cases}\text{n 区 },U(x)=-\frac{N_\text{D}e}{\varepsilon_0}\biggl(x_\text{n}x+\frac12x^2\biggr)\:,\\\\\text{p 区 },U(x)=-\frac{N_\text{A}e}{\varepsilon_0}\biggl(x_\text{p}x-\frac12x^2\biggr)\:,\end{cases}$$
+
+n 区边界 $x = -x_n$ 处:
+$$U(-x_n) = -\frac{N_D e}{\varepsilon_0} \left[ x_n(-x_n) + \frac12 (-x_n)^2 \right]
+= \frac{N_D e}{2\varepsilon_0} x_n^2$$
+
+p 区边界 $x = x_p$ 处:
+$$U(x_p) = -\frac{N_A e}{\varepsilon_0} \left[ x_p \cdot x_p - \frac12 x_p^2 \right]
+= -\frac{N_A e}{2\varepsilon_0} x_p^2$$
+
+电势差:
+$$U = U(-x_n) - U(x_p)= \frac{e}{2\varepsilon_0} \left( N_D x_n^2 + N_A x_p^2 \right)$$
+
+
+
+
+
+\end{document}

@@ -1,0 +1,455 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+
+1.2-3
+
+将测量到的电荷量（单位：$ 10^{-19}\rm{C} $）从小到大排序：
+
+$ 6.568,\ 8.204,\ 11.50,\ 13.13,\ 16.48,\ 18.08,\ 19.71,\ 22.89,\ 26.13 $
+
+计算相邻电荷量的差值
+
+$$8.204 - 6.568 = 1.636 \qquad11.50 - 8.204 = 3.296 $$
+$$13.13 - 11.50 = 1.63 \qquad16.48 - 13.13 = 3.35 $$
+$$18.08 - 16.48 = 1.60 \qquad19.71 - 18.08 = 1.63 $$
+$$22.89 - 19.71 = 3.18 \qquad26.13 - 22.89 = 3.24 $$
+
+差值多集中在 $ 1.6 \times 10^{-19}\rm{C} $ 附近，且较大差值（如 $ 3.296 $、$ 3.35 $）约为 $ 1.6 \times 10^{-19}\rm{C} $ 的2倍，符合 $ e $ 的整数倍特征。
+
+将每个电荷量除以对应的整数 $ n $，得到 $ e $ 的候选值：
+
+$$\frac{6.568}{4} = 1.642 \qquad\frac{8.204}{5} = 1.6408 $$
+$$\frac{11.50}{7} \approx 1.6429 \qquad\frac{13.13}{8} = 1.6413 $$
+$$\frac{16.48}{10} = 1.648 \qquad\frac{18.08}{11} \approx 1.6436 $$
+$$\frac{19.71}{12} = 1.6425 \qquad\frac{22.89}{14} \approx 1.635 $$
+$$\frac{26.13}{16} \approx 1.6331 $$
+
+
+取这些候选值的平均值，得到 $ e \approx 1.64 \times 10^{-19}\rm{C} $
+
+最终结论
+
+根据密立根早期实验数据，推得元电荷 $ e \approx 1.64 \times 10^{-19}\rm{C} $
+
+
+\newpage
+
+1.2-5
+
+%1.2-5 两个点电荷$,q_1=+8.0\mu\rm{C},q_2=-16.0\mu\rm{C}(1\mu\rm{C}=10^{-6}\rm{C})$,相距 $20$ cm.求离它们都是 $20$ cm 处的电场强度$E$.
+
+两个点电荷 $q_1 = +8.0 \mu\rm{C}$ 和 $q_2 = -16.0 \mu\rm{C}$ 相距 $20 \rm{cm}$。
+
+离两者均为 $20\rm{cm}$ 的点 $P$ 与 $q_1$、$q_2$ 构成边长为 $20 \rm{cm}$ 的等边三角形。
+$$E = \frac{1}{4\pi\varepsilon_0}\frac{|q|}{r^2}$$
+$$\varepsilon_0=8.85\times10^{-12}\rm{C}^2/(\rm{N}\cdot \rm{m}^2)$$
+$$q_1 = 8.0 \times 10^{-6} \rm{C} \quad q_2 = -16.0 \times 10^{-6} \rm{C}\quad r = 0.2\rm{m}$$
+每个电荷在点 $P$ 产生的电场大小:
+
+$$E_1 = k \frac{|q_1|}{r^2} = 1.8 \times 10^6 \rm{N/C}$$
+
+方向远离 $q_1$(与从 $q_1$ 指向 $P$ 的向量相同)
+
+$$E_2 = k \frac{|q_2|}{r^2} = 3.6 \times 10^6 \rm{N/C}$$
+
+方向指向 $q_2$(与从 $q_2$ 指向 $P$ 的向量相反)
+
+利用几何关系将电场分解为分量并叠加:
+
+设 $q_1$ 在原点 $(-\frac{1}{10},0)$,$q_2$ 在 $(\frac{1}{10}, 0)$,则点 $P$ 坐标为 $(0, \frac{\sqrt{3}}{10})$。
+
+$$E_{1x} = E_1 \cos 60^\circ = 0.9 \times 10^6 \rm{N/C}\quad E_{1y} = E_1 \sin 60^\circ = 9\sqrt{3} \times 10^5 \rm{N/C}$$
+
+$$E_{2x} =  1.8 \times 10^6 \rm{N/C}\quad E_{2y} =-18\sqrt{3} \times 10^5 \rm{N/C}$$
+
+$$E_x = E_{1x} + E_{2x} = 2.7 \times 10^6 \rm{N/C},E_y = E_{1y} + E_{2y} = 9\sqrt{3} \times 10^5 \rm{N/C}$$
+
+$$E = \sqrt{E_x^2 + E_y^2} = 18\sqrt{3}\times 10^5\rm{N/C} \approx 3.12 \times 10^6\rm{N/C}$$
+
+E与 x 轴正方向(从 $q_1$ 指向 $q_2$ 的方向)夹角 $\theta$ 满足:
+
+$$\tan \theta = \frac{E_y}{E_x} = \frac{9\sqrt{3} \times 10^5}{2.7 \times 10^6} = -\frac{\sqrt{3}}{3}$$
+
+即 $\theta = -30^\circ$(顺时针 $30^\circ$),指向右下方。
+
+因此,点 $P$ 处的电场强度大小为 $3.12 \times 10^6 \rm{N/C}$,方向与 $q_1q_2$ 连线成 $30^\circ$ 角指向下方(从 $q_1$ 指向 $q_2$ 为参考,顺时针 $30^\circ$)。
+
+
+\newpage
+
+1.2-6
+
+%1.2-6 如题图所示, 一电偶极子的电偶极矩 $p = ql,P$ 点到偶极子中心 $O$ 的距离为 $r$, $r$ 与 $l$ 的夹角为 $\theta$. 
+%在 $r \gg l$ 时, 求 $P$ 点的电场强度 $E$ 在 $r = OP$ 方向的分量 $E_r$ 和垂直于 $r$ 方向上的分量 $E_\theta$.
+
+
+设偶极子中心为$O$,场点$P$到$O$的距离为$r$,$r$与$l$的夹角为$\theta$。
+
+$+q$的位置:$O$沿$l$方向外侧$\frac{l}{2}$处
+
+$-q$的位置:$O$沿$l$反方向外侧$\frac{l}{2}$处
+
+点电荷的电场公式:$E=\frac{1}{4\pi\varepsilon_0}\frac{q}{r'^2}e_{r'}$,其中$r'$是场点到点电荷的距离
+
+$e_{r'}$是从点电荷指向场点的单位矢量。
+
+对$+q$,到$P$的距离$r_+ = \left|r-\frac{l}{2}\right|$,由余弦定理:
+
+$$r_+^2 = r^2 + \left(\frac{l}{2}\right)^2 2r\cdot\frac{l}{2}\cos\theta$$
+
+$\frac{l^2}{4r^2}\ll1$,利用二项式展开$(1+x)^{-2}\approx1-2x$($x\ll1$):
+
+$$\frac{1}{r_+^2}\approx\frac{1}{r^2}\left(1+\frac{2l\cos\theta}{r}\right)$$
+
+同理,对$-q$,到$P$的距离$r_= \left|r+\frac{l}{2}\right|$,可得:
+
+$$\frac{1}{r_-^2}\approx\frac{1}{r^2}\left(1-\frac{2l\cos\theta}{r}\right)$$
+
+因为$r\gg l$,$e_{r_+}$和$e_{r_-}$与$e_r$(沿$OP$方向的单位矢量)的夹角极小
+
+设为$\alpha$,几何关系得:
+
+径向分量(沿$e_r$):$\cos\alpha\approx1$(高阶小量忽略)
+
+垂直径向分量(垂直$e_r$,沿$\theta$增大方向):$\sin\alpha\approx\frac{\frac{l}{2}\sin\theta}{r}$
+
+且$e_{r_+}$的垂直分量向上,$e_{r_-}$的垂直分量也向上(因$-q$的电场指向自身,分量方向与$+q$一致)。
+
+1.径向分量$E_r$(沿$e_r$方向)
+
+$+q$的径向电场分量:
+
+$$E_{+r}=\frac{1}{4\pi\varepsilon_0}\frac{q}{r_+^2}\cos\alpha\approx\frac{q}{4\pi\varepsilon_0 r^2}\left(1+\frac{2l\cos\theta}{r}\right)$$
+
+$-q$的径向电场分量(电荷为负,电场指向$-q$):
+
+$$E_{-r}=\frac{1}{4\pi\varepsilon_0}\frac{-q}{r_-^2}\cos\alpha\approx\frac{-q}{4\pi\varepsilon_0 r^2}\left(1-\frac{2l\cos\theta}{r}\right)$$
+
+叠加得总径向分量:
+$$E_r = E_{+r}+E_{-r} $$
+$$E_r=\frac{q}{4\pi\varepsilon_0 r^2}\left[\left(1+\frac{2l\cos\theta}{r}\right)-\left(1-\frac{2l\cos\theta}{r}\right)\right] =\frac{1}{4\pi\varepsilon_0}\frac{2ql\cos\theta}{r^3}$$
+
+代入$p=ql$,最终径向分量:
+
+$$E_r = e_r \cdot \frac{1}{4\pi\varepsilon_0}\frac{2p\cos\theta}{r^3}$$
+
+2. 垂直径向分量$E_\theta$(垂直$e_r$方向)
+
+$+q$的垂直电场分量:
+
+$$E_{+\theta}=\frac{1}{4\pi\varepsilon_0}\frac{q}{r_+^2}\sin\alpha\approx\frac{q}{4\pi\varepsilon_0 r^2}\cdot\frac{l\sin\theta}{2r}$$
+
+$-q$的垂直电场分量(方向与$+q$一致,叠加增强):
+
+$$E_{-\theta}=\frac{1}{4\pi\varepsilon_0}\frac{-q}{r_-^2}(-\sin\alpha)\approx\frac{q}{4\pi\varepsilon_0 r^2}\cdot\frac{l\sin\theta}{2r}$$
+
+叠加得总垂直分量:
+
+$$E_\theta = E_{+\theta}+E_{-\theta} =\frac{q}{4\pi\varepsilon_0 r^2}\cdot\frac{l\sin\theta}{r}$$
+
+代入$p=ql$,最终垂直分量:
+
+$$E_\theta = e_\theta \cdot \frac{1}{4\pi\varepsilon_0}\frac{p\sin\theta}{r^3}$$
+
+
+
+
+
+\newpage
+
+1.2-9
+
+%1.2-9 题图所示是另一种电四极子,设 $q$ 和 $l$ 都已知,图中 $P$ 点到电四极子中心 $O$ 的距离为 $x$, $PO$ 与正方形的一对边平行,
+%求 $P$ 点的电场强度 $E$. 当 $x \gg l$ 时,求 $P$ 点的电场强度 $E$.
+
+设正方形中心在原点, $ P $ 点在 $ x $ 轴上,距离 $ O $ 为 $ x $,即 $ P = (x, 0) $
+$$
+A: \left( \frac{l}{2}, \frac{l}{2}, 0 \right),
+B: \left( -\frac{l}{2}, \frac{l}{2}, 0 \right),
+C: \left( -\frac{l}{2}, -\frac{l}{2}, 0 \right),
+D: \left( \frac{l}{2}, -\frac{l}{2}, 0 \right)
+$$
+$$q_A = +q, \quad q_B = -q, \quad q_C = +q, \quad q_D = -q$$
+
+点 $ P = (x, 0, 0) $,到各电荷的距离:
+
+$$r_A = \sqrt{\left(x - \frac{l}{2}\right)^2 + \frac{l^2}{4}},r_B = \sqrt{\left(x + \frac{l}{2}\right)^2 + \frac{l^2}{4}}$$
+$$r_C = \sqrt{\left(x + \frac{l}{2}\right)^2 + \frac{l^2}{4}} = r_B,r_D = \sqrt{\left(x - \frac{l}{2}\right)^2 + \frac{l^2}{4}} = r_A$$
+
+$$\vec{E} = \sum_{i} \frac{k q_i (\vec{r} - \vec{r}_i)}{|\vec{r} - \vec{r}_i|^3}$$
+
+设 $ \vec{r}_P = (x, 0) $。
+
+$$\vec{r}_P - \vec{r}_A = \left( x - \frac{l}{2}, -\frac{l}{2}, 0 \right),|\vec{r}_P - \vec{r}_A| = r_A$$
+$$\vec{E}_A = \frac{k q}{r_A^3} \left( x - \frac{l}{2}, -\frac{l}{2}, 0 \right)$$
+
+
+$$\vec{r}_P - \vec{r}_B = \left( x + \frac{l}{2},-\frac{l}{2},0 \right),r_B = \sqrt{(x+\frac{l}{2})^2 + \frac{l^2}{4}}$$
+$$\vec{E}_B = \frac{k (-q)}{r_B^3} \left( x + \frac{l}{2}, -\frac{l}{2}, 0 \right)$$
+
+$$\vec{r}_P - \vec{r}_C = \left( x + \frac{l}{2}, \frac{l}{2}, 0 \right),r_C = r_B,\vec{E}_C = \frac{k q}{r_B^3} \left( x + \frac{l}{2}, \frac{l}{2}, 0 \right)$$
+
+$$\vec{r}_P - \vec{r}_D = \left( x - \frac{l}{2}, \frac{l}{2}, 0 \right),r_D = r_A,\vec{E}_D = \frac{k (-q)}{r_A^3} \left( x - \frac{l}{2}, \frac{l}{2}, 0 \right)$$
+
+$$E_{Ax} = \frac{k q (x - l/2)}{r_A^3}\qquad E_{Bx} = -\frac{k q (x + l/2)}{r_B^3}$$
+$$E_{Cx} = \frac{k q (x + l/2)}{r_B^3}\qquad E_{Dx} = -\frac{k q (x - l/2)}{r_A^3}$$
+
+$$ E_{Ax} + E_{Dx} = 0 E_{Bx} + E_{Cx} = 0 $$  
+
+再看 $ E_y $ 分量:
+
+$$E_{Ay} = \frac{k q (-l/2)}{r_A^3}\qquad E_{By} = -\frac{k q (-l/2)}{r_B^3} = +\frac{k q (l/2)}{r_B^3}$$
+$$E_{Cy} = \frac{k q (l/2)}{r_B^3}\qquad E_{Dy} = -\frac{k q (l/2)}{r_A^3}$$
+
+所以:
+$$E_y = -\frac{k q l/2}{r_A^3} + \frac{k q l/2}{r_B^3} + \frac{k q l/2}{r_B^3} - \frac{k q l/2}{r_A^3}$$
+$$E_y = - \frac{k q l}{r_A^3} + \frac{k q l}{r_B^3}$$
+$$E_y = k q l \left( \frac{1}{r_B^3} - \frac{1}{r_A^3} \right)$$
+
+$$\vec{E}(P) = \left( 0, \; k q l \left[ \frac{1}{r_B^3} - \frac{1}{r_A^3} \right],\right)$$
+其中
+$$r_A = \sqrt{(x - l/2)^2 + l^2/4}, \quad r_B = \sqrt{(x + l/2)^2 + l^2/4}.$$
+
+$$k =1/(4\pi\varepsilon_0),p=ql$$
+
+$$E=\frac{p}{4\pi\varepsilon_0}[\frac{1}{\left(x^2-xl+\frac{l^2}{2}\right)^{3/2}}-\frac{1}{\left(x^2+xl+\frac{l^2}{2}\right)^{3/2}}]$$
+
+当 $ x \gg l $ 时,展开 $ r_A^{-3} $ 和 $ r_B^{-3} $。
+$$E_y = k q l (r2^{-3} - r1^{-3}) = k q l [ -3l x^{-4} + O(x^{-6}) ] = -3 k q l^2 x^{-4} + \cdots$$
+所以,在 $x\gg l$时,电场强度大小为 $E = |E_y| =3 k q l^2 / x^4$,方向沿 y轴负方向(因为系数为负)。
+
+$$E = \frac{3}{4\pi\varepsilon_0} \frac{q l^2}{x^4}$$
+
+
+
+
+
+\newpage
+
+1.2-10
+
+%1.2-10 均匀带电细棒,设棒长为$2l$,总电荷量为 $q$
+%(1)在通过自身端点的垂直面上的场强分布
+%(2)在自身的延长线上的场强分布.
+
+
+ (1)  通过自身端点的垂直面上的场强分布
+建立坐标系
+设细棒沿 $ x $ 轴放置，端点 $ O $ 在坐标原点，棒的另一端点坐标为 $ (2l, 0) $。
+取垂直面($ y-z $ 平面)上任意一点 $ P $，坐标为 $ (0, y) $(由对称性，$ z $ 方向场强分量抵消，只需分析 $ x-y $ 平面)。
+
+取电荷元并分析场强分量
+
+在细棒上取一电荷元 $ dq $，位置坐标为 $ (x, 0) $($ 0\le x\le 2l $)，长度为 $ dx $，则 $ dq = \lambda dx $。
+
+电荷元到 $ P $ 点的距离 $ r = \sqrt{x^2+y^2} $，
+
+由库仑定律，$ dq $ 在 $ P $ 点产生的场强大小为:
+$$dE = \frac{1}{4\pi\varepsilon_0} \cdot \frac{dq}{r^2} = \frac{\lambda dx}{4\pi\varepsilon_0(x^2+y^2)}$$
+
+将 $ dE $ 分解为沿 $ x $ 轴负方向的分量 $ dE_x $ 和沿 $ y $ 轴正方向的分量 $ dE_y $，由几何关系 $ \cos\alpha = \frac{x}{r} $、$ \sin\alpha = \frac{y}{r} $，得:
+$$dE_x=-dE\cos\alpha=-\frac{\lambda xdx}{4\pi\varepsilon_0(x^2+y^2)^{3/2}}$$
+$$dE_y=dE\sin\alpha=\frac{\lambda ydx}{4\pi\varepsilon_0(x^2+y^2)^{3/2}}$$
+
+$$E_x = \int_0^{2l} dE_x = -\frac{\lambda}{4\pi\varepsilon_0} \int_0^{2l} \frac{x dx}{(x^2+y^2)^{3/2}} = -\frac{\lambda}{4\pi\varepsilon_0} \left( \frac{1}{y} - \frac{1}{\sqrt{4l^2+y^2}} \right)$$
+
+$$E_y = \int_0^{2l} dE_y =\frac{\lambda y}{4\pi\varepsilon_0} \int_0^{2l} \frac{dx}{(x^2+y^2)^{3/2}} = \frac{\lambda}{4\pi\varepsilon_0} \cdot \frac{2l}{y\sqrt{4l^2+y^2}}$$
+
+代入 $ \lambda = \frac{q}{2l} $ 化简
+$$E_x = -\frac{q}{8\pi\varepsilon_0 l} \left( \frac{1}{y} - \frac{1}{\sqrt{4l^2+y^2}} \right) $$
+$$E_y = \frac{q}{4\pi\varepsilon_0 y \sqrt{4l^2+y^2}}$$
+
+ 场强的大小与方向
+大小:$ E = \sqrt{E_x^2 + E_y^2} $
+方向:与 $ y $ 轴夹角 $ \varphi $ 满足 $ \tan\varphi = \left| \frac{E_x}{E_y} \right| $
+\newpage
+ (2)  自身延长线上的场强分布
+
+同(1)，细棒沿 $ x $ 轴，端点 $ O(0,0) $，另一端 $ (2l,0) $，$ \lambda = \frac{q}{2l} $。
+
+取延长线上任意一点 $ P $，坐标为 $ (x, 0) $
+
+分两种情况讨论:$x>2l $(棒的外侧延长线)、$x<0 $(原点外侧延长线)。
+
+ 情况1:$ x>2l $(棒右侧延长线)
+取电荷元 $ dq = \lambda dx' $(位置 $ x' \in [0,2l] $)，电荷元到 $ P $ 点的距离 $ r = x - x' $
+
+场强方向沿 $ x $ 正方向，大小 $ dE = \frac{\lambda dx'}{4\pi\varepsilon_0(x - x')^2} $。
+
+积分求总场强:
+$$E = \int_0^{2l} dE = \frac{\lambda}{4\pi\varepsilon_0} \int_0^{2l} \frac{dx'}{(x - x')^2} = \frac{\lambda}{4\pi\varepsilon_0} \left. \frac{1}{x - x'} \right|_0^{2l} = \frac{\lambda}{4\pi\varepsilon_0} \left( \frac{1}{x - 2l} - \frac{1}{x} \right)$$
+
+代入 $ \lambda = \frac{q}{2l} $，得:
+$$E = \frac{q}{8\pi\varepsilon_0 l} \left( \frac{1}{x - 2l} - \frac{1}{x} \right) \quad (x>2l)$$
+
+ 情况2:$ x<0 $(棒左侧延长线)
+电荷元到 $ P $ 点的距离 $ r = x' - x $(因 $ x<0 $，$ x' - x > 0 $)，场强方向沿 $ x $ 负方向。
+
+同理积分得:
+$$E = -\frac{q}{8\pi\varepsilon_0 l} \left( \frac{1}{-x} - \frac{1}{2l - x} \right) \quad (x<0)$$
+
+
+
+
+
+
+\newpage
+
+1.2-12
+
+%1.2-12 一半径为 $R$ 的均匀带电圆环, 总电荷量为 $q$. 
+%(1) 求轴线上离环中心 $O$ 为 $x$ 处的场强 $E$
+%(2) 画出 $E$-$x$ 曲线
+%(3) 轴线上什么地方场强最大,其值是多少
+
+
+设圆环在 $ xy $ 平面内，圆心在原点，半径为 $ R $，总电荷 $ q $，均匀分布，线电荷密度  
+$$\lambda = \frac{q}{2\pi R}.$$
+取圆环上一段电荷元 $ dq = \lambda R d\theta $，位于 $ (R\cos\theta, R\sin\theta, 0) $。场点 $ P = (0, 0, x) $
+从电荷元到 $ P $ 的矢量:
+$$\vec{r} = (0 - R\cos\theta, 0 - R\sin\theta, z - 0) = (-R\cos\theta, -R\sin\theta, z).$$
+$$r = \sqrt{R^2 + z^2}.$$
+由对称性，圆环在 $ P $ 点的电场只有 $ z $ 方向分量，$ x, y $ 分量总和为 0。
+电荷元产生的电场在 $ z $ 方向的分量:
+$$dE_z = \frac{1}{4\pi\varepsilon_0} \frac{dq}{r^2} \cdot \frac{z}{r}= \frac{1}{4\pi\varepsilon_0} \frac{\lambda R d\theta}{(R^2 + z^2)^{3/2}} \, z.$$
+$$E_z = \frac{1}{4\pi\varepsilon_0} \frac{\lambda R z}{(R^2 + z^2)^{3/2}} \int_0^{2\pi} d\theta= \frac{1}{4\pi\varepsilon_0} \frac{\lambda R z}{(R^2 + z^2)^{3/2}} \cdot 2\pi.$$
+代入 $ \lambda = \frac{q}{2\pi R} $:
+$$E_z = \frac{1}{4\pi\varepsilon_0} \frac{q z}{(R^2 + z^2)^{3/2}}.$$
+所以，轴线上距离环心 $ x $ 处的场强(沿轴线方向):
+$$E(x) = \frac{1}{4\pi\varepsilon_0} \frac{q x}{(R^2 + x^2)^{3/2}}$$
+方向沿轴线，$ x>0 $ 时向外，$ x<0 $ 时向环心。
+
+ (2) 画出 $ E $-$ x $ 曲线
+
+函数 $ E(x) = k \frac{q x}{(R^2 + x^2)^{3/2}} $，其中 $ k = \frac{1}{4\pi\varepsilon_0} $。
+
+
+\begin{tikzpicture}[scale=1.5, domain=-3:3, samples=200]
+
+    % 坐标轴
+    \draw[->] (-3.2,0) -- (3.2,0) node[right] {$x$};
+    \draw[->] (0,-1.5) -- (0,1.5) node[above] {$E(x)$};
+
+    % 函数公式标注
+    \node[above right] at (2,1) {$ E(x) = k \frac{q x}{(R^2 + x^2)^{3/2}} $};
+
+    % 画出函数曲线
+    \draw[thick, blue] plot (\x, {3*\x / ( (1+(\x)^2)^(3/2) )});
+
+    % 真正的极值点 x = ±1/sqrt(2) ≈ ±0.707
+    \pgfmathsetmacro{\ex}{1/sqrt(2)}
+    \pgfmathsetmacro{\ey}{3*\ex / ((1+(\ex)^2)^(3/2))} % ey = 2/sqrt(3) ≈ 1.1547
+    \draw[dashed] (\ex,0) -- (\ex,\ey);
+    \draw[dashed] (-\ex,0) -- (-\ex,-\ey);
+
+    % 原点标注
+    \node[below right] at (0,0) {$O$};
+
+\end{tikzpicture}
+
+
+
+(3) 考虑 $ x \ge 0 $ 部分，令
+$$f(x) = \frac{x}{(R^2 + x^2)^{3/2}}.$$
+$$f'(x) = \frac{(R^2 + x^2)^{3/2} - x \cdot \frac{3}{2}(R^2 + x^2)^{1/2} \cdot 2x}{(R^2 + x^2)^3}.$$
+化简分子(提取 $ (R^2 + x^2)^{1/2} $):
+$$(R^2 + x^2)^{1/2} \left[ (R^2 + x^2) - 3x^2 \right] = (R^2 + x^2)^{1/2} (R^2 - 2x^2).$$
+所以:
+$$f'(x) = \frac{(R^2 + x^2)^{1/2} (R^2 - 2x^2)}{(R^2 + x^2)^3}= \frac{R^2 - 2x^2}{(R^2 + x^2)^{5/2}}.$$
+令 $ f'(x) = 0 $ 得 $ R^2 - 2x^2 = 0 $，即
+$$x = \pm \frac{R}{\sqrt{2}}.$$
+当 $ 0 < x < R/\sqrt{2} $ 时 $ f'(x) > 0 $，当 $ x > R/\sqrt{2} $ 时 $ f'(x) < 0 $
+
+所以 $ x = R/\sqrt{2} $ 处 $ f $ 取极大值。
+
+$$E_{\max} = \frac{1}{4\pi\varepsilon_0} \frac{q \cdot \frac{R}{\sqrt{2}}}{\left(R^2 + \frac{R^2}{2}\right)^{3/2}}= \frac{1}{4\pi\varepsilon_0} \frac{q R/\sqrt{2}}{\left(\frac{3R^2}{2}\right)^{3/2}}.$$
+$$\left(\frac{3R^2}{2}\right)^{3/2} = \left(\frac{3}{2}\right)^{3/2} R^3.$$
+$$E_{\max} = \frac{1}{4\pi\varepsilon_0} \frac{q R}{\sqrt{2}} \cdot \frac{1}{\left(\frac{3}{2}\right)^{3/2} R^3}= \frac{1}{4\pi\varepsilon_0} \frac{q}{R^2} \cdot \frac{1}{\sqrt{2} \cdot \left(\frac{3}{2}\right)^{3/2}}.$$
+$$\sqrt{2} \cdot \left(\frac{3}{2}\right)^{3/2} = \sqrt{2} \cdot \frac{3\sqrt{3}}{2\sqrt{2}} \cdot \frac{1}{\sqrt{2}}$$
+$$E_{\max} =\frac{q}{6\sqrt{3}\pi\varepsilon_0R^2}.$$
+
+
+
+
+\newpage
+
+1.2-13
+
+%1.2-13 半径为$R$的圆面上均匀带电,电荷的面密度为$\sigma_e.$
+%(1) 求 轴 线上离圆心的坐标为 $x$处的场强；
+%(2)在保持$\sigma_e$不变的情况下,当$R\to0$和$R\to\infty$时结果各如何？
+%(3)在保持总电荷$Q=\pi R^2\sigma_e$不变的情况下,当$R\to0$和$R\to\infty$时结果各如何？
+
+设圆面半径为$R$，电荷面密度$\sigma_e$，轴线为$x$轴，圆心在坐标原点$O$，场点$P$坐标为$(x, 0)$。
+
+在圆面上取一半径为$r$、宽度为$dr$的同心细圆环，其面积 $dS = 2\pi r dr$，带电量
+
+$$dq = \sigma_e dS = 2\pi\sigma_e r dr$$
+
+已知半径为$r$、带电量为$dq$的细圆环，在轴上距离圆心$x$处的场强大小为
+
+$$dE = \frac{1}{4\pi\varepsilon_0} \cdot \frac{x dq}{(x^2 + r^2)^{3/2}}$$
+
+场强方向沿$x$轴($\sigma_e>0$时背离圆心，$\sigma_e<0$时指向圆心)。
+
+将$dq$代入，积分区间$r \in [0, R]$:
+$$E= \int_0^R dE = \int_0^R \frac{1}{4\pi\varepsilon_0} \cdot \frac{x \cdot 2\pi\sigma_e r dr}{(x^2 + r^2)^{3/2}} \frac{\sigma_e x}{2\varepsilon_0} \int_0^R \frac{r dr}{(x^2 + r^2)^{3/2}}$$
+
+令$u = x^2 + r^2$，则$du = 2r dr$，积分上下限变为$u=x^2 \to u=x^2+R^2$，积分式化简为
+
+$$\int \frac{r dr}{(x^2 + r^2)^{3/2}} = \frac{1}{2}\int u^{-3/2} du = -u^{-1/2} + C$$
+
+代入计算得
+$$E = \frac{\sigma_e x}{2\varepsilon_0} \left[ \frac{1}{|x|} - \frac{1}{\sqrt{x^2 + R^2}} \right]$$
+
+考虑场强方向，最终轴上场强表达式为
+
+$$E = \frac{\sigma_e}{2\varepsilon_0} \left[ 1 - \frac{|x|}{\sqrt{x^2 + R^2}} \right] e_x$$
+
+
+ (2) 保持$\sigma_e$不变，分析$R\to0$和$R\to\infty$的极限
+当$R\to0$时
+
+$$\frac{|x|}{\sqrt{x^2 + R^2}} \to \frac{|x|}{|x|} = 1$$
+
+代入场强公式得
+
+$$E \to \frac{\sigma_e}{2\varepsilon_0} \left( 1 - 1 \right) = 0$$
+
+当$R\to\infty$时
+
+$$\frac{|x|}{\sqrt{x^2 + R^2}} = \frac{|x|}{R\sqrt{1 + \frac{x^2}{R^2}}} \to 0$$
+
+代入场强公式得
+
+$$E \to \frac{\sigma_e}{2\varepsilon_0}$$
+
+ (3) 保持总电荷$Q=\pi R^2\sigma_e$不变，分析$R\to0$和$R\to\infty$的极限
+
+由$Q=\pi R^2\sigma_e$得$\sigma_e = \frac{Q}{\pi R^2}$，代入轴上场强公式:
+
+$$E = \frac{Q}{2\pi\varepsilon_0 R^2} \left[ 1 - \frac{|x|}{\sqrt{x^2 + R^2}} \right]$$
+
+当$R\to0$时
+
+对括号内部分做泰勒展开($R\ll|x|$):
+
+$$\frac{|x|}{\sqrt{x^2 + R^2}} = \frac{1}{\sqrt{1 + \frac{R^2}{x^2}}} \approx 1 - \frac{R^2}{2x^2}$$
+
+$$E \approx \frac{Q}{2\pi\varepsilon_0 R^2} \cdot \frac{R^2}{2x^2} = \frac{Q}{4\pi\varepsilon_0 x^2}$$
+
+当$R\to\infty$时
+
+$$\frac{|x|}{\sqrt{x^2 + R^2}} \to 0$$
+
+但$\sigma_e = \frac{Q}{\pi R^2}\to0$，代入场强公式得
+
+$$E = \frac{Q}{2\pi\varepsilon_0 R^2} \to 0$$
+
+
+
+
+\end{document}
