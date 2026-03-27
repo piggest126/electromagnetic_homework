@@ -1,4 +1,3 @@
-
 \documentclass{article}
 \usepackage{ctex}
 \usepackage{amsmath}
@@ -21,15 +20,15 @@ $ A $ 与 $ B $ 之间、$ A $ 与 $ C $ 之间各形成一个电容器
 
 $$U_A = U_{AB} = U_{AC}$$
 
-平行板电容公式：
+平行板电容公式:
 $$C = \frac{\varepsilon_0 S}{d},\varepsilon_0 = 8.85 \times 10^{-12} \ \rm{F/m}$$
 $$C_{AB} = \frac{\varepsilon_0 S}{d_{AB}} = \frac{8.85\times 10^{-12} \times 0.02}{0.004}= 4.425\times 10^{-11} \ \rm{F}$$
 $$C_{AC} = \frac{\varepsilon_0 S}{d_{AC}} = \frac{8.85\times 10^{-12} \times 0.02}{0.002}= 8.85\times 10^{-11} \ \rm{F}$$
 
 
-$ A $ 板总电荷 $ Q_A $ 分布在两个表面上：  
+$ A $ 板总电荷 $ Q_A $ 分布在两个表面上:  
 
-面对 $ B $ 的表面电荷为 $ Q_{AB} $,面对 $ C $ 的表面电荷为 $ Q_{AC} $,且：
+面对 $ B $ 的表面电荷为 $ Q_{AB} $,面对 $ C $ 的表面电荷为 $ Q_{AC} $,且:
 $$Q_{AB} + Q_{AC} = Q_A ,Q_{AB} = C_{AB} U_A, Q_{AC} = C_{AC} U_A$$
 
 $$(C_{AB} + C_{AC}) U_A = Q_A$$
@@ -41,7 +40,7 @@ $$C_{AB} + C_{AC} = 1.3275\times 10^{-10} \ \rm{F},U_A = \frac{3.0\times 10^{-7}
 $ B $ 板上的感应电荷 $ Q_B $
 $$Q_B = - Q_{AB} = - C_{AB} U_A= - C_{AB}\times \frac{Q_A}{C_{AB} + C_{AC}}  =- 1.0\times 10^{-7} \ \rm{C}$$
 
-同理,$ C $ 板感应电荷 $ Q_C $：
+同理,$ C $ 板感应电荷 $ Q_C $:
 $$Q_C = - Q_{AC} = - C_{AC} U_A = -2.0\times 10^{-7} \ \rm{C}$$
 
 $$\boxed{Q_B = -1.0\times 10^{-7}\ \rm{C},\quad Q_C = -2.0\times 10^{-7}\ \rm{C},\quad U_A \approx 2.26\times 10^{3}\ \rm{V}}$$
@@ -66,34 +65,34 @@ $$\boxed{Q_B = -1.0\times 10^{-7}\ \rm{C},\quad Q_C = -2.0\times 10^{-7}\ \rm{C}
 
 2.1-6 %点电荷 $q$ 处在导体球壳的中心,壳的内外半径分别为 $R_1$ 和 $R_2$. 求场强和电势的分布,并画出 $E-r$ 和 $U-r$ 曲线.
 
-球壳内半径 $ R_1 $，外半径 $ R_2 $。
-由于球对称，所有物理量只与 $ r $ 有关。
+球壳内半径 $ R_1 $,外半径 $ R_2 $。
+由于球对称,所有物理量只与 $ r $ 有关。
 
 
-导体内部（ $ R_1 < r < R_2 $）电场为零
+导体内部( $ R_1 < r < R_2 $)电场为零
 
-因为导体内部场为零，高斯面在 $ R_1 < r < R_2 $ 内必须电通量为零
+因为导体内部场为零,高斯面在 $ R_1 < r < R_2 $ 内必须电通量为零
 
 所以内表面总电荷 = $-q$
 
 中心点电荷 $ q $ 在内表面会感应出均匀分布的电荷 $ -q $。  
 
-球壳原本总电荷为 0，所以外表面均匀分布总电荷 = $ +q $
+球壳原本总电荷为 0,所以外表面均匀分布总电荷 = $ +q $
 
 $$\rho_{\text{内}}(r=R_1) = -\frac{q}{4\pi R_1^2}, \quad\rho_{\text{外}}(r=R_2) = +\frac{q}{4\pi R_2^2}.$$
 
 
 
-用高斯定理，取同心球面为高斯面。
+用高斯定理,取同心球面为高斯面。
 
 (a) $ 0 < r < R_1 $
-高斯面内只有中心点电荷 $ q $：
+高斯面内只有中心点电荷 $ q $:
 $$E \cdot 4\pi r^2 = \frac{q}{\varepsilon_0}$$
 $$E(r) = \frac{q}{4\pi\varepsilon_0 r^2}$$
 
 
 (b) $ R_1 < r < R_2 $
-导体内部，电场为零：
+导体内部,电场为零:
 $$E(r) = 0.$$
 
 (c) $ r > R_2 $
@@ -113,7 +112,7 @@ $$
 
 
 
-取无穷远为电势零点：$ U(\infty) = 0 $。
+取无穷远为电势零点:$ U(\infty) = 0 $。
 
 (a) $ r \ge R_2 $
 $$
@@ -123,7 +122,7 @@ U(r) = \int_{r}^{\infty} E(r') \, dr'
 $$
 
 (b) $ R_1 \le r \le R_2 $
-导体等势，所以：
+导体等势,所以:
 $$
 U(r) = U(R_2) = \frac{q}{4\pi\varepsilon_0 R_2}.
 $$
@@ -131,7 +130,7 @@ $$
 (c) $ 0 < r < R_1 $
 从 $ r $ 到 $ R_1 $ 有电场 $ E = \frac{q}{4\pi\varepsilon_0 r'^2} $
 
-从 $ R_1 $ 到 $ R_2 $ 电场为零（电势不变），所以：
+从 $ R_1 $ 到 $ R_2 $ 电场为零(电势不变),所以:
 
 $$
 U(r) = \int_{r}^{R_1} \frac{q}{4\pi\varepsilon_0 r'^2} dr' + U(R_1)= \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{r} - \frac{1}{R_1} \right) + \frac{q}{4\pi\varepsilon_0 R_2}.
@@ -144,16 +143,30 @@ $$
 
 
 $$
+\boxed{
+E(r) =
+\begin{cases}
+\dfrac{q}{4\pi\varepsilon_0 r^2}, & 0 < r < R_1, \\
+0, & R_1 < r < R_2, \\
+\dfrac{q}{4\pi\varepsilon_0 r^2}, & r > R_2.
+\end{cases}
+}
+$$
+
+
+
+
+
+$$
+\boxed{
 U(r) =
 \begin{cases}
 \dfrac{q}{4\pi\varepsilon_0} \left( \dfrac{1}{r} - \dfrac{1}{R_1} + \dfrac{1}{R_2} \right), & 0 < r < R_1, \\
 \dfrac{q}{4\pi\varepsilon_0 R_2}, & R_1 \le r \le R_2, \\
 \dfrac{q}{4\pi\varepsilon_0 r}, & r \ge R_2.
 \end{cases}
+}
 $$
-
-
-
 
 
 \vspace{2em}
@@ -209,11 +222,6 @@ $$
 
 
 
-
-
-
-
-
 \newpage
 2.1-7 %在上题中,若 $q = 4 \times 10^{-10} \, \rm{C}, R_1 = 2 \rm{cm}, R_2 = 3 \rm{cm}$, 求:  
 
@@ -228,7 +236,7 @@ $q = 4\times 10^{-10} \ \rm{C}, \quad R_1 = 2\ \rm{cm} = 0.02\ \rm{m}, \quad R_2
 
 
  (1)
-上一题已得：对于 $ R_1 \le r \le R_2 $，导体是等势体，电势为
+上一题已得:对于 $ R_1 \le r \le R_2 $,导体是等势体,电势为
 $$U_1 = \frac{q}{4\pi\varepsilon_0 R_2}= 120 \ \rm{V}$$
 
  (2) 
@@ -240,20 +248,20 @@ $$U =300 \ \text{V}$$
 
 
 
- (3) 点电荷移开球心 $ 1\ \text{cm} $，求导体球壳的电势
+ (3) 点电荷移开球心 $ 1\ \text{cm} $,求导体球壳的电势
 
 
-由于静电屏蔽，壳外的电场完全由外表面的 $+q$ 均匀分布决定
+由于静电屏蔽,壳外的电场完全由外表面的 $+q$ 均匀分布决定
 
 壳外电场 = 位于球心的 $+q$ 产生的电场。  
 
-因此壳的电势（$ r \ge R_2 $）为：
+因此壳的电势($ r \ge R_2 $)为:
 $$U_1 = \frac{q}{4\pi\varepsilon_0 R_2}$$
 $$U_1 = 120\ \text{V} \quad $$
 
 
 $$
-(1)\ 120\ \text{V}, \quad (2)\ 300\ \text{V}, \quad (3)\ 120\ \text{V}
+\boxed{(1)\ 120\ \text{V}, \quad (2)\ 300\ \text{V}, \quad (3)\ 120\ \text{V}}
 $$
 
 
@@ -263,31 +271,33 @@ $$
 
 \newpage
 
-2.1-8半径为$R_1$的导体球带有电荷 $q$,球外有一个内,外半径为$R_2,R_3$ 的同心导体球壳,壳上带有电荷 $Q$
+2.1-8%半径为$R_1$的导体球带有电荷 $q$,球外有一个内,外半径为$R_2,R_3$ 的同心导体球壳,壳上带有电荷 $Q$
 
-(1)求两球的电势$U_{1}$ 和$U_2$
+%(1)求两球的电势$U_{1}$ 和$U_2$
 
-(2)两球的电势差$\Delta U;$
+%(2)两球的电势差$\Delta U;$
 
-(3)以导线把球和壳连接在一起后,$U_1,U_2$和$\Delta U$分别是多少?
+%(3)以导线把球和壳连接在一起后,$U_1,U_2$和$\Delta U$分别是多少?
 
-(4)在情形(1),(2)中,若外球接地,$U_1,U_2$和$\Delta U$为多少?
+%(4)在情形(1),(2)中,若外球接地,$U_1,U_2$和$\Delta U$为多少?
 
-(5) 设外球离地面很远,若内球接地,情况如何?
-
-
-
-
-静电平衡时，电荷分布为：
-
-(1) 内球：电荷 $ q $ 均匀分布在 $ r = R_1 $ 表面。  
-(2) 外球壳内表面（$ r = R_2 $）：由于内球带 $ q $，静电感应使外球壳内表面带 $ -q $（高斯定理，取 $ R_1 < r < R_2 $ 的高斯面，内部总电荷 $ q + (-q) = 0 $）。  
-(3) 外球壳外表面（$ r = R_3 $）：外球壳总电荷 $ Q $，内表面已有 $ -q $，所以外表面带 $ Q + q $。
+%(5) 设外球离地面很远,若内球接地,情况如何?
 
 
 
- (1)：未连接导线，未接地
- 电场分布（高斯定理）
+
+静电平衡时,电荷分布为:
+
+内球:电荷 $ q $ 均匀分布在 $ r = R_1 $ 表面。  
+
+外球壳内表面($ r = R_2 $):由于内球带 $ q $,静电感应使外球壳内表面带 $ -q $
+
+外球壳外表面($ r = R_3 $):外球壳总电荷 $ Q $,所以外表面带 $ Q + q $。
+
+
+
+ (1):未连接导线,未接地
+ 电场分布(高斯定理)
 $$
 E(r) =
 \begin{cases}
@@ -304,7 +314,8 @@ $$
 取无穷远 $ U(\infty) = 0 $。
 
 (a) 外球壳的电势 $ U_2 $
-外球壳是等势体，取 $ r = R_3 $ 处计算：
+外球壳是等势体,取 $ r = R_3 $ 处计算:
+
 $$
 U_2 = \int_{R_3}^{\infty} E(r) \, dr
 = \int_{R_3}^{\infty} \frac{Q+q}{4\pi\varepsilon_0 r^2} \, dr
@@ -312,61 +323,39 @@ U_2 = \int_{R_3}^{\infty} E(r) \, dr
 $$
 
 (b) 内球的电势 $ U_1 $
-从 $ r = R_1 $ 到 $ R_2 $ 有电场 $ \frac{q}{4\pi\varepsilon_0 r^2} $，从 $ R_2 $ 到 $ R_3 $ 电场为 0，从 $ R_3 $ 到无穷远有 $ \frac{Q+q}{4\pi\varepsilon_0 r^2} $：
-$$
-U_1 = \int_{R_1}^{R_2} \frac{q}{4\pi\varepsilon_0 r^2} \, dr
-+ \int_{R_2}^{R_3} 0 \, dr
-+ \int_{R_3}^{\infty} \frac{Q+q}{4\pi\varepsilon_0 r^2} \, dr.
-$$
-$$
-= \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right) + 0 + \frac{Q+q}{4\pi\varepsilon_0 R_3}.
-$$
-$$
-U_1 = \frac{1}{4\pi\varepsilon_0} \left[ \frac{q}{R_1} - \frac{q}{R_2} + \frac{Q+q}{R_3} \right].
-$$
+从 $ r = R_1 $ 到 $ R_2 $ 有电场 $ \frac{q}{4\pi\varepsilon_0 r^2} $,
+
+从 $ R_2 $ 到 $ R_3 $ 电场为 0,从 $ R_3 $ 到无穷远有 $ \frac{Q+q}{4\pi\varepsilon_0 r^2} $:
+
+$$U_1 = \int_{R_1}^{R_2} \frac{q}{4\pi\varepsilon_0 r^2}dr+ 0 + \int_{R_3}^{\infty} \frac{Q+q}{4\pi\varepsilon_0 r^2} dr= \frac{1}{4\pi\varepsilon_0} \left[ \frac{q}{R_1} - \frac{q}{R_2} + \frac{Q+q}{R_3} \right]$$
 
 
 
- 答案 (1)
-$$
-\boxed{U_1 = \frac{1}{4\pi\varepsilon_0} \left( \frac{q}{R_1} - \frac{q}{R_2} + \frac{Q+q}{R_3} \right)}
-$$
-$$
-\boxed{U_2 = \frac{Q+q}{4\pi\varepsilon_0 R_3}}
-$$
+$$\boxed{U_1 = \frac{1}{4\pi\varepsilon_0} \left( \frac{q}{R_1} - \frac{q}{R_2} + \frac{Q+q}{R_3} \right),U_2 = \frac{Q+q}{4\pi\varepsilon_0 R_3}}$$
+
+
+\vspace{2em}
+(2):两球电势差
+$$\Delta U = U_1 - U_2= \frac{1}{4\pi\varepsilon_0} \left[ \frac{q}{R_1} - \frac{q}{R_2} + \frac{Q+q}{R_3} - \frac{Q+q}{R_3} \right]$$
+$$\boxed{\Delta U = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right)}$$
+
+\newpage
 
 
 
- 3. 情形 (2)：两球电势差
-$$
-\Delta U = U_1 - U_2
-= \frac{1}{4\pi\varepsilon_0} \left[ \frac{q}{R_1} - \frac{q}{R_2} + \frac{Q+q}{R_3} - \frac{Q+q}{R_3} \right]
-$$
-$$
-\Delta U = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right).
-$$
+(3):用导线连接内球与外球壳
 
-$$
-\boxed{\Delta U = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right)}
-$$
+连接后,内球与外球壳等势,电荷重新分布,静电平衡时导体内部无电荷
+ 
+初始:内球 $ q $,外球壳 $ Q $,总电荷 $ q+Q $ 
 
+连接后,内球与外球壳导体连通成为一个导体
 
+电荷全部分布在外表面($ r = R_3 $),电荷为 $ q+Q $
 
- 4. 情形 (3)：用导线连接内球与外球壳
-连接后，内球与外球壳等势，电荷重新分布。  
-设连接后内球电荷变为 $ q' $，外球壳总电荷仍为 $ Q $（系统总电荷 $ q+Q $ 守恒）。  
-连接后内球与外球壳等势，且它们之间（$ R_1 < r < R_2 $）电场为零 → 高斯面（$ R_1 < r < R_2 $）内总电荷为零 → 外球壳内表面电荷 = $ -q' $。  
-外球壳外表面电荷 = 总电荷 $ Q+q $ 减去内表面电荷 $ -q' $？ 不对，总电荷守恒：  
-外球壳总电荷 $ Q $，内表面电荷 $ -q' $，所以外表面电荷 $ Q + q' $。  
-系统总电荷：内球 $ q' $ + 外球壳 $ Q $ = $ q' + Q $ = 初始总电荷 $ q+Q $ ⇒ $ q' = q $？ 这不对，因为连接后电荷可以流动，内球电荷可以变，但总电荷守恒：  
-内球电荷 $ q_1 $，外球壳总电荷 $ Q $，总电荷 $ q_1 + Q = q + Q $ ⇒ $ q_1 = q $ 吗？ 这样就没变化？ 矛盾。
+内球表面电荷为 0,外球壳内表面($ r=R_2 $)电荷也为 0,
 
-等一下，仔细想：  
-初始：内球 $ q $，外球壳 $ Q $，总电荷 $ q+Q $。  
-连接后，内球与外球壳导体连通成为一个导体，电荷全部分布在外表面（$ r = R_3 $），因为静电平衡时导体内部无电荷。  
-所以内球表面电荷为 0，外球壳内表面（$ r=R_2 $）电荷也为 0，外表面（$ r=R_3 $）电荷为 $ q+Q $。
-
-因此：
+因此:
 $$
 E(r) =
 \begin{cases}
@@ -374,197 +363,61 @@ E(r) =
 \dfrac{q+Q}{4\pi\varepsilon_0 r^2}, & r > R_3.
 \end{cases}
 $$
-电势：
-$$
-U_1 = U_2 = \frac{q+Q}{4\pi\varepsilon_0 R_3}.
-$$
-$$
-\Delta U = 0.
-$$
 
-
-
- 答案 (3)
 $$
 \boxed{U_1 = U_2 = \frac{q+Q}{4\pi\varepsilon_0 R_3}, \quad \Delta U = 0}
 $$
 
+\vspace{2em}
+
+(4):外球接地
+
+外球接地  $ U_2 = 0 $。  
+外球壳电势为零
+
+接地后 $ U_2 = 0 $,即 $ r = R_3 $ 处电势为零，
+
+设外球壳外表面电荷量 $ Q_o $
+
+$$U(R_3) = \frac{1}{4\pi\varepsilon_0} \left[ \frac{q}{R_3} + \frac{-q}{R_3} + \frac{Q_o}{R_3} \right] = \frac{Q_o}{4\pi\varepsilon_0 R_3} = 0$$
+
+外球壳外表面电荷为 0
+
+内表面仍为 $ -q $,外球壳总电荷 = $ -q $。
 
 
- 5. 情形 (4)：外球接地（初始情况 (1) 时接地）
-外球接地 ⇒ $ U_2 = 0 $。  
-外球壳电势为零，但外球壳外表面电荷会变化，因为接地后电荷可流入大地。  
+内球电势 $ U_1 $:
+从 $ R_1 $ 到 $ R_2 $:电场 $ \frac{q}{4\pi\varepsilon_0 r^2} $  
 
-设接地后外球壳外表面电荷为 $ Q' $，内表面仍为 $ -q $（因为内球仍带 $ q $，且 $ R_1 < r < R_2 $ 的高斯面内总电荷为零）。  
-外球壳总电荷 = 内表面 $ -q $ + 外表面 $ Q' $ = 初始外球壳电荷 $ Q $？ 不对，接地后外球壳总电荷可以改变，因为电荷可流入大地。  
+从 $ R_2 $ 到 $ R_3 $:电场为 0(导体内部)  
 
-更合理：接地后 $ U_2 = 0 $，即 $ r = R_3 $ 处电势为零。  
-电势由三部分贡献：  
-1. 内球 $ q $（在 $ r=R_1 $）  
-2. 外球壳内表面 $ -q $（在 $ r=R_2 $）  
-3. 外球壳外表面 $ Q_o $（在 $ r=R_3 $）
-
-在 $ r = R_3 $ 处：
-$$
-U(R_3) = \frac{1}{4\pi\varepsilon_0} \left[ \frac{q}{R_3} + \frac{-q}{R_3} + \frac{Q_o}{R_3} \right] = \frac{Q_o}{4\pi\varepsilon_0 R_3} = 0
-$$
-$ Q_o = 0 $。
-
-所以外球壳外表面电荷为 0，内表面仍为 $ -q $，外球壳总电荷 = $ -q $。
+从 $ R_3 $ 到无穷远:电场为 0(因为外表面电荷 0,且无穷远电势 0)  
 
 
+$$U_1 = \int_{R_1}^{R_2} \frac{q}{4\pi\varepsilon_0 r^2} dr + 0 + 0= \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right).$$
+$$U_2 = 0.$$
+$$\Delta U = U_1 - U_2 = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right).$$
 
- 电势计算
-内球电势 $ U_1 $：
-从 $ R_1 $ 到 $ R_2 $：电场 $ \frac{q}{4\pi\varepsilon_0 r^2} $  
-从 $ R_2 $ 到 $ R_3 $：电场为 0（导体内部）  
-从 $ R_3 $ 到无穷远：电场为 0（因为外表面电荷 0，且无穷远电势 0）  
-所以：
-$$
-U_1 = \int_{R_1}^{R_2} \frac{q}{4\pi\varepsilon_0 r^2} dr + 0 + 0
-= \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right).
-$$
-$$
-U_2 = 0.
-$$
-$$
-\Delta U = U_1 - U_2 = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right).
-$$
-
-
-
- 答案 (4)
-$$
-\boxed{U_1 = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right), \quad U_2 = 0, \quad \Delta U = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right)}
-$$
-
-
-
- 6. 情形 (5)：外球离地很远，内球接地
-内球接地 ⇒ $ U_1 = 0 $。  
-设内球电荷变为 $ q' $，外球壳总电荷仍为 $ Q $（因为外球壳未接地，电荷守恒？ 不对，内球接地后电荷可流入大地，所以内球电荷可变，外球壳总电荷不变？ 要小心：内球接地后，内球与大地是导体连接，内球电荷可以变化，但外球壳与内球之间没有导线连接，所以外球壳总电荷仍为 $ Q $ 吗？ 是的，因为外球壳孤立（除了与内球电容耦合）。  
-
-设内球电荷 $ q' $，外球壳内表面电荷 $ -q' $，外球壳外表面电荷 $ Q + q' $（因为外球壳总电荷 = 内表面 $ -q' $ + 外表面 $ Q_o $ = $ Q $ ⇒ $ Q_o = Q + q' $）。
-
-内球电势 $ U_1 = 0 $：
-$$
-U_1 = \frac{1}{4\pi\varepsilon_0} \left[ \frac{q'}{R_1} - \frac{q'}{R_2} + \frac{Q + q'}{R_3} \right] = 0.
-$$
-$$
-\frac{q'}{R_1} - \frac{q'}{R_2} + \frac{Q + q'}{R_3} = 0.
-$$
-$$
-q' \left( \frac{1}{R_1} - \frac{1}{R_2} + \frac{1}{R_3} \right) + \frac{Q}{R_3} = 0.
-$$
-$$
-q' = -\frac{Q/R_3}{\frac{1}{R_1} - \frac{1}{R_2} + \frac{1}{R_3}}.
-$$
-
-外球壳电势：
-$$
-U_2 = \frac{Q + q'}{4\pi\varepsilon_0 R_3}.
-$$
-电势差：
-$$
-\Delta U = U_1 - U_2 = -U_2.
-$$
-
-
-
- 答案 (5)
-$$
-\boxed{q' = -\frac{Q/R_3}{\frac{1}{R_1} - \frac{1}{R_2} + \frac{1}{R_3}}, \quad U_1 = 0, \quad U_2 = \frac{Q + q'}{4\pi\varepsilon_0 R_3}, \quad \Delta U = -U_2}
-$$
-
-
-
-最终整理：
-1. $ U_1, U_2, \Delta U $ 如上。
-2. 连接后等势。
-3. 外球接地时外表面电荷为零。
-4. 内球接地时内球电荷改变。
+$$\boxed{U_1 = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right), \quad U_2 = 0, \quad \Delta U = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right)}$$
 
 
 
 
+(5):外球离地很远，内球接地
 
-好的，我们一步步来解这个同轴圆柱形电容的电势分布问题。  
+内球接地  $ U_1 = 0 $,设内球电荷 $ q' $
 
-
-
- 1. 已知条件
-- 内圆柱体：半径 $ R_1 $，电势 $ U_1 $。
-- 外圆柱体：内半径 $ R_2 $，电势 $ U_2 $。
-- 两圆柱体很长 → 可视为无限长，忽略边缘效应。
-- 圆柱间为真空（或均匀介质，这里按真空处理）。
-- 求 $ R_1 < r < R_2 $ 处的电势 $ U(r) $。
+外球壳内表面电荷 $ -q' $，外球壳外表面电荷 $ Q + q' $
 
 
+内球电势 $ U_1 = 0 $:
+$$U_1 = \frac{1}{4\pi\varepsilon_0} \left[ \frac{q'}{R_1} - \frac{q'}{R_2} + \frac{Q + q'}{R_3} \right] = 0.$$
+$$\frac{q'}{R_1} - \frac{q'}{R_2} + \frac{Q + q'}{R_3} = 0.$$
+$$q' \left( \frac{1}{R_1} - \frac{1}{R_2} + \frac{1}{R_3} \right) + \frac{Q}{R_3} = 0.$$
 
- 2. 电场分布
-由高斯定理，对于长度为 $ L $、半径为 $ r $（$ R_1 < r < R_2 $）的同轴圆柱面，内部电荷为内圆柱单位长度电荷 $ \lambda $（设内圆柱带电线电荷密度为 $ +\lambda $，外圆柱内表面感应 $ -\lambda $）。
+$$q' = -\frac{Q/R_3}{\frac{1}{R_1} - \frac{1}{R_2} + \frac{1}{R_3}}.$$
 
-电场方向沿径向，大小为：
-$$
-E(r) = \frac{\lambda}{2\pi\varepsilon_0 r}.
-$$
-
-
-
- 3. 电势差与 $\lambda$ 的关系
-内、外圆柱间电压：
-$$
-U_1 - U_2 = \int_{R_1}^{R_2} E(r) \, dr
-= \int_{R_1}^{R_2} \frac{\lambda}{2\pi\varepsilon_0 r} \, dr
-= \frac{\lambda}{2\pi\varepsilon_0} \ln\frac{R_2}{R_1}.
-$$
-所以：
-$$
-\lambda = \frac{2\pi\varepsilon_0 (U_1 - U_2)}{\ln(R_2/R_1)}.
-$$
-
-
-
- 4. 电势分布 $ U(r) $
-取从内圆柱（$ r = R_1 $，电势 $ U_1 $）到任意 $ r $ 的积分：
-$$
-U(r) = U_1 - \int_{R_1}^{r} E(r') \, dr'
-= U_1 - \frac{\lambda}{2\pi\varepsilon_0} \int_{R_1}^{r} \frac{dr'}{r'}
-$$
-$$
-= U_1 - \frac{\lambda}{2\pi\varepsilon_0} \ln\frac{r}{R_1}.
-$$
-
-代入 $\lambda$：
-$$
-U(r) = U_1 - \frac{U_1 - U_2}{\ln(R_2/R_1)} \cdot \ln\frac{r}{R_1}.
-$$
-
-
-
- 5. 整理成常用形式
-$$
-U(r) = U_1 - (U_1 - U_2) \frac{\ln(r/R_1)}{\ln(R_2/R_1)}.
-$$
-或者写成：
-$$
-U(r) = \frac{U_1 \ln(R_2/r) + U_2 \ln(r/R_1)}{\ln(R_2/R_1)}.
-$$
-
-验证：  
-- $ r = R_1 $ 时，$ U(R_1) = U_1 $。
-- $ r = R_2 $ 时，$ U(R_2) = U_2 $。
-
-
-
- 6. 最终答案
-$$
-\boxed{U(r) = U_1 - (U_1 - U_2) \frac{\ln(r/R_1)}{\ln(R_2/R_1)}}
-$$
-或等价形式：
-$$
-U(r) = \frac{U_1 \ln\frac{R_2}{r} + U_2 \ln\frac{r}{R_1}}{\ln\frac{R_2}{R_1}}, \quad R_1 < r < R_2.
-$$
+$$\boxed{ U_1 = 0, \quad U_2 = \frac{Q + q'}{4\pi\varepsilon_0 R_3}, \quad \Delta U = -U_2=- \frac{Q + q'}{4\pi\varepsilon_0 R_3}}$$
 
 
 
@@ -575,8 +428,38 @@ $$
 
 \newpage
 
-2.1-12 同轴传输线是由两个很长且彼此绝缘的同轴金属直圆柱体构成.
-设内圆柱体的电势为$U_{1}$,半径为 $R_1$,外圆柱体的电势为 $U_2$,内半径为 $R_2$,求其间离轴为 $r$ 处$(R_1<r<R_2)$ 的电势.
+2.1-12 %同轴传输线是由两个很长且彼此绝缘的同轴金属直圆柱体构成.
+%设内圆柱体的电势为$U_{1}$,半径为 $R_1$,外圆柱体的电势为 $U_2$,内半径为 $R_2$,求其间离轴为 $r$ 处$(R_1<r<R_2)$ 的电势.
+
+设内圆柱带电线电荷密度为 $ +\lambda $,外圆柱内表面感应 $ -\lambda $
+
+由高斯定理,对于长度为 $ L $、半径为 $ r $($ R_1 < r < R_2 $)的同轴圆柱面
+
+电场方向沿径向,大小为:
+
+$$E(r) = \frac{\lambda}{2\pi\varepsilon_0 r}.$$
+
+
+内、外圆柱间电压:
+$$U_1 - U_2 = \int_{R_1}^{R_2} E(r)  dr= \int_{R_1}^{R_2} \frac{\lambda}{2\pi\varepsilon_0 r}  dr= \frac{\lambda}{2\pi\varepsilon_0} \ln\frac{R_2}{R_1}.$$
+
+$$\lambda = \frac{2\pi\varepsilon_0 (U_1 - U_2)}{\ln(R_2/R_1)}.$$
+
+
+
+取从内圆柱($ r = R_1 $,电势 $ U_1 $)到任意 $ r $ 的积分:
+
+$$U(r) = U_1 - \int_{R_1}^{r} E(r')  dr'= U_1 - \frac{\lambda}{2\pi\varepsilon_0} \int_{R_1}^{r} \frac{dr'}{r'}= U_1 - \frac{\lambda}{2\pi\varepsilon_0} \ln\frac{r}{R_1}.$$
+
+代入 $\lambda$:
+
+$$U(r) = U_1 - \frac{U_1 - U_2}{\ln(R_2/R_1)} \cdot \ln\frac{r}{R_1}= \frac{U_1 \ln(R_2/r) + U_2 \ln(r/R_1)}{\ln(R_2/R_1)}.$$
+
+$$
+\boxed{U(r) = \frac{U_1 \ln\frac{R_2}{r} + U_2 \ln\frac{r}{R_1}}{\ln\frac{R_2}{R_1}}, \quad R_1 < r < R_2}
+$$
+
+
 
 
 
