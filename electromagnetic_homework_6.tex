@@ -415,9 +415,13 @@ $$U_1 = \frac{1}{4\pi\varepsilon_0} \left[ \frac{q'}{R_1} - \frac{q'}{R_2} + \fr
 $$\frac{q'}{R_1} - \frac{q'}{R_2} + \frac{Q + q'}{R_3} = 0.$$
 $$q' \left( \frac{1}{R_1} - \frac{1}{R_2} + \frac{1}{R_3} \right) + \frac{Q}{R_3} = 0.$$
 
-$$q' = -\frac{Q/R_3}{\frac{1}{R_1} - \frac{1}{R_2} + \frac{1}{R_3}}.$$
+$$q' = -\frac{Q/R_3}{\frac{1}{R_1} - \frac{1}{R_2} + \frac{1}{R_3}}=-\frac{QR_1R_2}{R_2R_3-R_1R_3+R_1R_2}$$
 
-$$\boxed{ U_1 = 0, \quad U_2 = \frac{Q + q'}{4\pi\varepsilon_0 R_3}, \quad \Delta U = -U_2=- \frac{Q + q'}{4\pi\varepsilon_0 R_3}}$$
+$$U_2 = \frac{Q + q'}{4\pi\varepsilon_0 R_3}=\frac{Q(R_2-R_1)}{4\pi\varepsilon_0(R_2R_3-R_3R_1+R_1R_2)}$$
+
+
+$$\boxed{ U_1 = 0, \quad , U_{2}=\frac{Q(R_{2}-R_{1})}{4\pi\varepsilon_{0}(R_{2}R_{3}-R_{3}R_{1}+R_{1}R_{2})}}$$
+$$\boxed{\Delta U=-U_{2}=\frac{Q(R_{1}-R_{2})}{4\pi\varepsilon_{0}(R_{2}R_{3}-R_{3}R_{1}+R_{1}R_{2})}}$$
 
 
 
@@ -453,10 +457,10 @@ $$U(r) = U_1 - \int_{R_1}^{r} E(r')  dr'= U_1 - \frac{\lambda}{2\pi\varepsilon_0
 
 代入 $\lambda$:
 
-$$U(r) = U_1 - \frac{U_1 - U_2}{\ln(R_2/R_1)} \cdot \ln\frac{r}{R_1}= \frac{U_1 \ln(R_2/r) + U_2 \ln(r/R_1)}{\ln(R_2/R_1)}.$$
+$$U(r) = U_1 - \frac{U_1 - U_2}{\ln(R_2/R_1)} \cdot \ln\frac{r}{R_1}= U_1-(U_1-U_2)\frac{\ln(\frac{r}{R_1})}{\ln(\frac{R_2}{R_1})}.$$
 
 $$
-\boxed{U(r) = \frac{U_1 \ln\frac{R_2}{r} + U_2 \ln\frac{r}{R_1}}{\ln\frac{R_2}{R_1}}, \quad R_1 < r < R_2}
+\boxed{U(r) =U_1-(U_1-U_2)\frac{\ln(\frac{r}{R_1})}{\ln(\frac{R_2}{R_1})}, \quad R_1 < r < R_2}
 $$
 
 
