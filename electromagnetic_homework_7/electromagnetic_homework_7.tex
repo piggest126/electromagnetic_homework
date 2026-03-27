@@ -6,9 +6,161 @@
 \usetikzlibrary{arrows.meta, decorations.markings,patterns}
 \begin{document}
 
-2.2-8 如题图所示,一电容器两极板都是边长为a的正方形金属平板,两板不是严格平行,而是有一夹角$\theta$.证明：当 $\theta\ll d/a$ 时,略去边缘效应,它的电容为
+2.2-8 %如题图所示,一电容器两极板都是边长为a的正方形金属平板,两板不是严格平行,而是有一夹角$\theta$.证明：当 $\theta\ll d/a$ 时,略去边缘效应,它的电容为
 
-$$C=\varepsilon_0 \frac{a^2}d\Big(1-\frac{a\theta}{2d}\Big).$$
+%$$C=\varepsilon_0 \frac{a^2}d\Big(1-\frac{a\theta}{2d}\Big).$$
+
+
+
+下板位于 $ z = 0 $,范围 $ 0 \le x \le a $,$ 0 \le y \le a $.
+
+上板绕 $ x $ 轴（平行于 $ x $ 方向的一条边）旋转小角度 $ \theta $,上板平面方程：
+
+$$z = d + y \tan\theta \approx d + y\theta$$
+
+其中 $ d $ 是 $ y=0 $ 处的板间距.
+
+
+
+忽略边缘效应,$ \theta $ 很小,电场线近似垂直下板,故电场大小只依赖于 $ y $
+
+$$E(y) = \frac{U}{h(y)} = \frac{U}{d + y\theta}$$
+
+其中 $ U $ 是两板间电压（常数）.
+
+
+
+在下板表面（$ z=0 $）,由导体边界条件：
+
+$$\sigma(y) = \varepsilon_0 E(y) = \frac{\varepsilon_0 U}{d + y\theta}$$
+
+
+
+$$Q = \iint_S \sigma(y)dxdy= \int_{x=0}^{a} dx \int_{y=0}^{a} \frac{\varepsilon_0 U}{d + y\theta} dy= a \varepsilon_0 U \int_{0}^{a} \frac{dy}{d + y\theta}$$
+
+
+$$Q = \frac{a \varepsilon_0 U}{\theta} \ln\left( 1 + \frac{a\theta}{d} \right),C = \frac{Q}{U} = \frac{a \varepsilon_0}{\theta} \ln\left( 1 + \frac{a\theta}{d} \right)$$
+
+
+令 $ \delta = \frac{a\theta}{d} $,已知 $ \theta \ll d/a $,即 $ \delta \ll 1 $.
+
+$$\ln(1+\delta) = \delta - \frac{\delta^2}{2} + \frac{\delta^3}{3} - \dots$$
+代入：
+$$C = \frac{a \varepsilon_0}{\theta} \left[ \frac{a\theta}{d} - \frac{1}{2} \left( \frac{a\theta}{d} \right)^2 + O\left( \frac{a^3\theta^3}{d^3} \right) \right]= \varepsilon_0 \frac{a^2}{d} \left[ 1 - \frac{a\theta}{2d} + O\left( \frac{a^2\theta^2}{d^2} \right) \right]$$
+
+
+
+
+保留到一阶小量：
+
+$$\boxed{C = \varepsilon_0 \frac{a^2}{d} \left( 1 - \frac{a\theta}{2d} \right)}$$
+
+这正是题目要求证明的公式.
+
+
+
+
+\newpage
+
+2.2-15 %四个电容器的电容分别为$C_1,C_2,C_3$ 和$C_4$,连接如题图,分别求：
+
+%(1)$AB$间的电容
+
+%$(2)DE$间的电容
+
+%$(3)AE$间的电容
+
+1. 求 $ AB $ 间电容
+
+在 网络中,$ A$ 与 $ B $ 之间直接有电容 $ C_1 $.  
+
+另外还有路径 $ A \to E  \to  C_3 \to D \to C_2 \to  B $
+
+即 $ C_3 $ 与 $ C_2 $ 串联,再与 $ C_1 $ 并联.  
+
+$$C_{AB} = C_1 + \frac{C_2 C_3}{C_2 + C_3}$$
+
+
+2. 求 $ DE $ 间电容
+
+$ D $ 与 $ E $ 之间直接有 $ C_3 $. 
+ 
+另外还有路径 $ D\to  C_2 \to B \to C_1 \to E $
+
+即 $ C_2 $ 与 $ C_1 $ 串联,再与 $ C_3 $ 并联.  
+
+$$C_{DE} = C_3 + \frac{C_1 C_2}{C_1 + C_2}$$
+
+3.求 $ AE $ 间电容
+
+$AE$之间短接,$C_{AE}=\infty$
+
+
+
+
+$$\boxed{C_{EB} = C_1 + \frac{C_2 C_3}{C_2 + C_3}, \quad C_{DE} = C_3 + \frac{C_1 C_2}{C_1 + C_2},\quad C_{AE}=\infty}$$
+
+
+
+
+
+\newpage
+
+2.2-25%题图中的电容$C_1,C_2,C_3$都是已知的,电容$C$是可以调节的.问当$C$调节到$A$、$B$两点的电势相等时,$C$的值是多少？
+
+
+
+$ C_1 $ 与 $ C_2 $ 串联,串联后两端记为 $ X $ 和 $ Y $
+
+$ C_3 $ 与 $ C $ 串联,串联后两端也记为 $ X $ 和 $ Y $
+
+这两条串联支路并联在 $ X $ 与 $ Y $ 之间,设 $ X $ 电势 $ U_X $,$ Y $ 电势 $ U_Y $.
+
+
+在 $ C_1 $ 与 $ C_2 $ 串联支路中,中间节点记为 $ A $.
+
+在 $ C_3 $ 与 $ C $ 串联支路中,中间节点记为 $ B $.
+
+$ A $ 与 $ B $ 等势,即 $ U_A = U_B $.
+
+设总电压 $ U_{XY} = U_X -U_Y $
+
+对于 $ C_1, C_2 $ 支路：
+  
+$ C_1 $ 上电压 $ U_X - U_A = \frac{Q}{C_1} $  \qquad
+$ C_2 $ 上电压 $ U_A - U_Y = \frac{Q}{C_2} $  
+
+$$ (U_X - U_A) + (U_A - U_Y) = U_X - U_Y = \frac{Q}{C_1} + \frac{Q}{C_2} = Q \left( \frac{1}{C_1} + \frac{1}{C_2} \right) $$  
+
+ $$ Q = \frac{U_X - U_Y}{\frac{1}{C_1} + \frac{1}{C_2}} $$
+
+
+ 
+$$ U_X - U_A = \frac{C_2}{C_1 + C_2} (U_X - U_Y) , U_A - U_Y = \frac{C_1}{C_1 + C_2} (U_X - U_Y) $$
+
+
+$$U_A = U_Y + \frac{C_1}{C_1 + C_2} (U_X - U_Y)$$
+
+
+同理,对于 $ C_3, C $ 支路：
+
+$$U_B = U_Y + \frac{C_3}{C_3 + C} (U_X - U_Y)$$
+
+
+
+等势条件 $ U_A = U_B $
+
+$$U_Y + \frac{C_1}{C_1 + C_2} (U_X - U_Y) = U_Y + \frac{C_3}{C_3 + C} (U_X - U_Y)$$
+
+消去 $ U_Y $ 和 $ U_X - U_Y $
+
+$$\frac{C_1}{C_1 + C_2} = \frac{C_3}{C_3 + C}$$
+
+$$
+\boxed{C = \frac{C_2 C_3}{C_1}}
+$$
+
+
 
 
 
@@ -17,46 +169,60 @@ $$C=\varepsilon_0 \frac{a^2}d\Big(1-\frac{a\theta}{2d}\Big).$$
 
 \newpage
 
-2.2-15 四个电容器的电容分别为$C_1,C_2,C_3$ 和$C_4$,连接如题图,分别求：
+2.2-32 %(1)一平行板电容器两极板的面积都是$S$,相距为$d$,电容为$C=\frac{\varepsilon_0S}{d}.$当在两板上加电压$U$时,略去边缘效应,两板间电场强度为$E=\frac{U}{d}.$其中一板所带电荷量为$Q=CU$ ,故它所受的力为
 
-(1)$AB$间的电容
+%$$F=QE=CU(\frac Ud)=\frac{CU^2}{d}.$$
 
-$(2)DE$间的电容
+%这个结果对不对？为什么？
 
-$(3)AE$间的电容
+%(2) 用虚功原理证明：正确的公式应为
 
+%$$F=\frac12\frac{Q^2}{Cd}=\frac12\frac{CU^2}d.$$
 
+1. 原推导错误原因
 
+平行板电容器中，一个极板受力 = 该板电荷 × 另一板产生的电场
 
+总电场 $ E = \frac{U}{d} $ 是两个极板电场叠加的结果。  
 
+一个无限大带电平面单独产生的电场大小为 $ E = \frac{\sigma}{2\varepsilon_0} $。
 
+所以受力：
+$$F = Q \cdot \frac{\sigma}{2\varepsilon_0} = Q \cdot \frac{Q}{2\varepsilon_0 S}.$$
 
-\newpage
+代入 $ C = \frac{\varepsilon_0 S}{d} $，得：
 
-2.2-25题图中的电容$C_1,C_2,C_3$都是已知的,电容$C$是可以调节的.问当$C$调节到$A$、$B$两点的电势相等时,$C$的值是多少？
+$$F = \frac{Q^2}{2\varepsilon_0 S} = \frac12 \cdot \frac{C U^2}{d}.$$
 
-
-
-
-
-
-
-
-
-
-\newpage
-
-2.2-32 (1)一平行板电容器两极板的面积都是$S$,相距为$d$,电容为$C=\frac{\varepsilon_0S}{d}.$当在两板上加电压$U$时,略去边缘效应,两板间电场强度为$E=\frac{U}{d}.$其中一板所带电荷量为$Q=CU$ ,故它所受的力为
-
-$$F=QE=CU(\frac Ud)=\frac{CU^2}{d}.$$
-
-这个结果对不对？为什么？
-
-(2) 用虚功原理证明：正确的公式应为
-
-$$F=\frac12\frac{Q^2}{Cd}=\frac12\frac{CU^2}d.$$
+原推导用 $ F = QE = Q \cdot \frac{U}{d} $ 错在用了总电场。
 
 
+
+2. 虚功原理推导
+
+情况一：电荷 $ Q $ 不变
+
+能量：
+
+$$W = \frac{Q^2}{2C}, \quad C = \frac{\varepsilon_0 S}{x}\qquad W(x) = \frac{Q^2 x}{2\varepsilon_0 S}.$$
+
+$$F = +\frac{dW}{dx} = \frac{Q^2}{2\varepsilon_0 S} = \frac{Q^2}{2Cd}.$$
+
+情况二：电压 $ U $ 不变
+
+能量：
+
+$$W = \frac12 C U^2, \quad C = \frac{\varepsilon_0 S}{x}\qquad W(x) = \frac{\varepsilon_0 S U^2}{2x}.$$
+
+虚位移时电源做功 $ U^2 dC $，电场能变化 $ \frac12 U^2 dC $，机械功：
+
+$$F dx = U^2 dC - \frac12 U^2 dC = \frac12 U^2 dC\qquad dC = -\frac{\varepsilon_0 S}{x^2} dx.$$
+
+$$F dx = \frac12 U^2 \left( -\frac{\varepsilon_0 S}{x^2} dx \right).$$
+
+$$F = -\frac12 \frac{\varepsilon_0 S U^2}{x^2}\qquad |F| = \frac12 \frac{\varepsilon_0 S U^2}{d^2} = \frac12 \frac{C U^2}{d}$$
+
+$$\boxed{F = \frac12 \frac{Q^2}{C d} = \frac12 \frac{C U^2}{d}}$$
 
 
 
