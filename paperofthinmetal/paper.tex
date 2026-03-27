@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{unicode-math}
+\usetikzlibrary{arrows.meta, decorations.markings,patterns}
+
+\title{薄金属膜电场分析}
+\date{\today}
+\author{}
+\begin{document}
+
+\maketitle
+
+\section{问题}
+
+很薄的金属薄膜(厚度为几十个甚至几个原子层，其中自由电子有限)在静电场的作用下，分析金属导体内部的场强
+
+\section{建模}
+仅从经典力学进行讨论，不考虑量子力学，进行建模
+
+\subsection{问题重述与假设}
+
+金属薄膜很薄，厚度 $ d $ 为纳米量级（例如几个到几十个原子层，假设 $ d \approx 1 \,\rm{nm} \sim 10 \,\rm{nm} $）。
+
+金属内部有自由电子，但数量有限（但薄膜很薄，总电子数不多）。
+
+只考虑经典静电学（不涉及量子尺寸效应、能带结构等）
+
+静电场由外部施加，例如上下极板加电压，薄膜置于其中。
+
+金属在静电情况下内部电场应为零（理想导体），但自由电子有限意味着：薄膜太薄时，电荷完全屏蔽外场需要一定的面电荷密度，如果自由电子总数不足以提供所需的面电荷密度，则屏蔽不完全，内部会有电场
+
+\subsection{建立模型}
+
+设薄膜在 $ z $ 方向，厚度 $ d $，面积 $ A $ 很大（$ A \gg d^2 $），可视为无限大平板。
+
+外部电场垂直于膜面（沿 $ z $ 方向），未加膜时均匀外场大小为 $ E_\text{out} $。
+
+金属膜放入后，自由电子会移动，在上下表面形成面电荷密度 $ \sigma $ 和 $ -\sigma $，从而产生一个内部极化电场 $ E_p $ 抵消外场。
+
+
+设金属膜单位体积的自由电子数 $ n $（体密度），膜体积 $ V = A d $
+
+总自由电子数：$N = n A d.$
+
+总自由电荷量：$Q_\text{max} = e  = e n A d$,这里 $ e $ 为电子电荷绝对值。
+
+\subsection{静电屏蔽能力}
+
+要完全屏蔽外场，需要表面电荷量 $ Q_\text{need} = \varepsilon_0 E_\text{out} A $。
+
+如果 $ Q_\text{max} < Q_\text{need} $，则电子全部移到表面也不足以完全屏蔽，此时内部电场不为零。
+
+
+
+设实际表面电荷密度为 $ \sigma_\text{real} $，由自由电子全部移到表面形成：
+$$\sigma_\text{real} = \frac{Q_\text{max}}{A} = e \times n \times d.$$
+这个面电荷产生的内部电场：
+$$E_p = -\frac{\sigma_\text{real}}{\varepsilon_0} = -\frac{e \times n \times d}{\varepsilon_0}.$$
+因此内部电场为：
+$$E_\text{in} = E_\text{out} + E_p = E_\text{out} - \frac{e \times n \times d}{\varepsilon_0}.$$
+
+
+\section{理论分析}
+
+\subsection{完全屏蔽所需的面电荷密度与电荷量}
+
+理想导体完全屏蔽外场所需的面电荷密度：
+$\sigma_{\text{need}} = \varepsilon_0 E_{\text{out}}$
+
+所需总电荷量（单面）：
+$Q_{\text{need}} = \varepsilon_0 E_{\text{out}} A$
+其中 $ A $ 为薄膜面积。
+
+
+
+\subsection{薄膜可提供的最大面电荷密度}
+
+薄膜中全部自由电子移到表面时，最大面电荷密度：
+$$
+\sigma_{\max} = e n d
+$$
+对应最大电荷量（单面）：
+$$
+Q_{\max} = e n A d
+$$
+
+
+
+
+\subsection{表面电荷密度}
+
+$$\sigma=\begin{cases}\varepsilon_0E_{\mathrm{ext}},E_{\mathrm{ext}}\leq E_c\\\\end,E_{\mathrm{ext}}>E_c&\end{cases}$$
+
+\subsection{内电场分布与临界电场}
+
+如果 $ \frac{e \times n \times d} {\varepsilon_0} \ge E_\text{out} $，则 $ E_\text{in} \le 0 $（实际上电子不会全部移到一边，会调整到内部电场为零，即理想屏蔽）。
+如果 $ \frac{\rm{e n d}}{ \varepsilon_0 < E_\text{out}} $，则电子全部移到表面后，内部电场仍为正（沿外场方向），大小为：
+$$E_\text{in} = E_\text{out} - \frac{e n d}{\varepsilon_0} > 0.$$
+此时表面电荷密度就是最大可能值 $ \rm{e n d} $，屏蔽不完全。
+
+当外场超过临界值  
+   $$E_c = \frac{e n d}{\varepsilon_0}$$
+   时，自由电子全部移到表面也无法完全屏蔽，内部存在剩余电场  
+   $$E_\text{in} = E_\text{out} - E_c > 0.$$
+
+   临界场强 $ E_c $ 与厚度 $ d $ 成正比。对于原子层级别的薄膜，$ E_c $ 可能只有 $ 10^2 \sim 10^3 \,\text{V/m} $ 量级，日常较强的静电场（如 $ 10^4 \,\text{V/m} $ 以上）就可能出现屏蔽不完全。
+
+若 $ E_\text{out} < E_c $，则行为类似理想导体，内部电场为零，表面电荷密度为 $ \varepsilon_0 E_\text{out} < e n d $，电子未完全移到表面。
+
+
+
+$$E_\text{in} = \max\left(0, \; E_\text{out} - \frac{e n d}{\varepsilon_0} \right)$$
+
+$$E_\text{in}=\begin{cases}0\quad E_\text{out} \leq \frac{e n d}{\varepsilon_0} \\\ E_\text{out} - \frac{e n d}{\varepsilon_0}\quad E_\text{out} > \frac{e n d}{\varepsilon_0}&\end{cases}$$
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
