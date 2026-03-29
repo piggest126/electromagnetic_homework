@@ -179,7 +179,7 @@ $$
 
 %$$F=\frac12\frac{Q^2}{Cd}=\frac12\frac{CU^2}d.$$
 
-1. 原推导错误原因
+(1). 原推导错误原因
 
 平行板电容器中，一个极板受力 = 该板电荷 × 另一板产生的电场
 
@@ -198,31 +198,36 @@ $$F = \frac{Q^2}{2\varepsilon_0 S} = \frac12 \cdot \frac{C U^2}{d}.$$
 
 
 
-2. 虚功原理推导
+(2) 用虚功原理证明 
 
-情况一：电荷 $ Q $ 不变
+考虑电容器与电压恒为 $U$ 的电源相连，忽略边缘效应。
 
-能量：
+电容 $C = \varepsilon_0 S / d$， $W_e = \frac{1}{2} C U^2$。当极板间距离 $d$ 发生虚位移 $\delta d$ 时：  
 
-$$W = \frac{Q^2}{2C}, \quad C = \frac{\varepsilon_0 S}{x}\qquad W(x) = \frac{Q^2 x}{2\varepsilon_0 S}.$$
+电容变化：$\delta C = -\frac{C}{d} \delta d$；  
 
-$$F = +\frac{dW}{dx} = \frac{Q^2}{2\varepsilon_0 S} = \frac{Q^2}{2Cd}.$$
+电容器储能变化：$\delta W_e = \frac{1}{2} U^2 \delta C$；  
+电源做功：$\delta W_s = U \delta Q = U^2 \delta C$；  
 
-情况二：电压 $ U $ 不变
+设外力 $F$使极板缓慢移动 $\delta d$，则外力做功 $F \delta d$。  
 
-能量：
+由能量守恒：  
+$$\delta W_s + F \delta d = \delta W_e$$  
+代入得：  
+$$F \delta d = \frac{1}{2} U^2 \delta C - U^2 \delta C = -\frac{1}{2} U^2 \delta C.$$  
+利用 $\delta C = -\frac{C}{d} \delta d$，有：  
 
-$$W = \frac12 C U^2, \quad C = \frac{\varepsilon_0 S}{x}\qquad W(x) = \frac{\varepsilon_0 S U^2}{2x}.$$
+$$F \delta d = -\frac{1}{2} U^2 \left( -\frac{C}{d} \delta d \right) = \frac{1}{2} \frac{C U^2}{d} \delta d.$$  
 
-虚位移时电源做功 $ U^2 dC $，电场能变化 $ \frac12 U^2 dC $，机械功：
+因此，  
 
-$$F dx = U^2 dC - \frac12 U^2 dC = \frac12 U^2 dC\qquad dC = -\frac{\varepsilon_0 S}{x^2} dx.$$
+$$F = \frac{1}{2} \frac{C U^2}{d}.$$  
 
-$$F dx = \frac12 U^2 \left( -\frac{\varepsilon_0 S}{x^2} dx \right).$$
+又因 $Q = C U$，代入上式得：  
 
-$$F = -\frac12 \frac{\varepsilon_0 S U^2}{x^2}\qquad |F| = \frac12 \frac{\varepsilon_0 S U^2}{d^2} = \frac12 \frac{C U^2}{d}$$
+$$F = \frac{1}{2} \frac{Q^2}{C d}.$$  
 
-$$\boxed{F = \frac12 \frac{Q^2}{C d} = \frac12 \frac{C U^2}{d}}$$
+证毕。
 
 
 
