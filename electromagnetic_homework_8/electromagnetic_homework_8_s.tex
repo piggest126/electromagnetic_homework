@@ -1,0 +1,360 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, decorations.markings,patterns}
+\begin{document}
+
+
+2.3-4
+
+(1): Let the free charge density on the plates be $\sigma_{e0}$.
+
+the displacement field is uniform across both dielectrics:  
+
+$$D = \sigma_{e0}.\qquad E_1 = \frac{D}{\varepsilon_1} = \frac{\sigma_{e0}}{\varepsilon_1}, \quad E_2 = \frac{\sigma_{e0}}{\varepsilon_2}.$$
+
+
+$$U = E_1 d_1 + E_2 d_2 = \sigma_{e0} \left( \frac{d_1}{\varepsilon_1} + \frac{d_2}{\varepsilon_2} \right).$$
+
+The total charge is $Q = \sigma_{e0} S$, so:  
+
+$$C = \frac{Q}{U} = \frac{\sigma_{e0} S}{\sigma_{e0} \left( \frac{d_1}{\varepsilon_1} + \frac{d_2}{\varepsilon_2} \right)}= \frac{S}{\frac{d_1}{\varepsilon_1} + \frac{d_2}{\varepsilon_2}}.$$
+
+$$\boxed{C = \frac{S}{\frac{d_1}{\varepsilon_1} + \frac{d_2}{\varepsilon_2}}}$$
+
+
+
+(2): Polarization vectors:  
+
+$$
+P_1 = D - \varepsilon_0 E_1 = \sigma_{e0} \left( 1 - \frac{\varepsilon_0}{\varepsilon_1} \right),
+$$
+$$
+P_2 = \sigma_{e0} \left( 1 - \frac{\varepsilon_0}{\varepsilon_2} \right).
+$$
+
+$$\sigma_{p1} = P_1\quad  \sigma_{p2} = -P_2\qquad \sigma_e' = \sigma_{p1} + \sigma_{p2} = P_1 - P_2.$$
+
+
+
+$$\sigma_e' = \sigma_{e0} \left[ \left(1 - \frac{\varepsilon_0}{\varepsilon_1}\right) - \left(1 - \frac{\varepsilon_0}{\varepsilon_2}\right) \right]
+= \sigma_{e0} \varepsilon_0 \left( \frac{1}{\varepsilon_2} - \frac{1}{\varepsilon_1} \right).$$
+
+$$
+\boxed{\sigma_e' = \sigma_{e0} \varepsilon_0 \left( \frac{1}{\varepsilon_2} - \frac{1}{\varepsilon_1} \right)}
+$$
+
+
+
+(3): From the result in part (1):  
+
+$$
+\boxed{U = \sigma_{e0} \left( \frac{d_1}{\varepsilon_1} + \frac{d_2}{\varepsilon_2} \right)}
+$$
+
+
+
+ (4): Electric displacement $D$ in both dielectrics  
+
+From Gauss’s law, $D$ is uniform across the dielectrics:  
+
+$$
+\boxed{D_1 = D_2 = \sigma_{e0}}
+$$
+
+
+
+
+\newpage
+
+
+2.3-7
+
+(1) Electric field $ E $, displacement $ D $, and polarization $ P $ in the dielectric
+
+From continuity of $ D $ and the voltage condition:
+
+$$
+D = \frac{U}{\dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon}}.
+$$
+
+Inside the dielectric:
+
+$$
+E_m = \frac{D}{\varepsilon} = \frac{U}{\varepsilon \left( \dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon} \right)},\quad
+P = D - \varepsilon_0 E_m = D\left( 1 - \frac{\varepsilon_0}{\varepsilon} \right).
+$$
+
+$$
+\boxed{E_m = \frac{U}{\varepsilon \left( \dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon} \right)},\quad 
+D_m = \frac{U}{\dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon}},\quad 
+P = D_m \left( 1 - \frac{\varepsilon_0}{\varepsilon} \right)}
+$$
+
+
+
+(2) Charge $ Q $ on the plates
+
+$$
+Q = D S = \frac{U S}{\dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon}}.
+$$
+
+$$
+\boxed{Q = \frac{U S}{\dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon}}}
+$$
+
+
+
+(3) Electric field $ E $ in the air gaps
+
+$$
+E_a = \frac{D}{\varepsilon_0} = \frac{U}{\varepsilon_0 \left( \dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon} \right)}.
+$$
+
+$$
+\boxed{E_a = \frac{U}{\varepsilon_0 \left( \dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon} \right)}}
+$$
+
+
+
+(4) Capacitance $ C $
+
+$$
+C = \frac{Q}{U} = \frac{S}{\dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon}}.
+$$
+
+$$
+\boxed{C = \frac{S}{\dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon}}}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+2.3-12
+
+   $$C = \frac{\varepsilon S}{d}.\qquad C_1 = \dfrac{\varepsilon_1 S_1}{d} \quad C_2 = \dfrac{\varepsilon_2 S_2}{d} $$
+
+
+   Since the two regions are in parallel (same voltage):
+
+   $$C = C_1 + C_2 = \frac{\varepsilon_1 S_1}{d} + \frac{\varepsilon_2 S_2}{d}.$$
+
+$$ \boxed{C = \frac{\varepsilon_1 S_1 + \varepsilon_2 S_2}{d}} $$
+
+\newpage
+
+2.3-13
+
+
+(1) Potential difference $ U $ between the plates
+
+The capacitor is divided into two parallel regions:  
+
+dielectric area: area $ S/2 $, dielectric thickness $ t $, air thickness $ d-t $.  
+
+  Capacitance:
+  $$  C_A = \frac{S/2}{\dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon}}.$$
+
+air area: area $ S/2 $, separation $ d $.  
+
+  Capacitance:
+  $$C_B = \frac{\varepsilon_0 S}{2d}.$$
+
+Total capacitance (parallel):
+$$C = C_A + C_B = \frac{S}{2} \left[ \frac{1}{\dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon}} + \frac{\varepsilon_0}{d} \right].$$
+
+Potential difference:
+$$\boxed{U = \frac{Q}{C} = \frac{Q}{\dfrac{S}{2} \left[ \dfrac{1}{\dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon}} + \dfrac{\varepsilon_0}{d} \right]}}$$
+
+
+
+(2) Capacitance $ C $
+
+$$\boxed{C = \frac{S}{2} \left[ \frac{1}{\dfrac{d-t}{\varepsilon_0} + \dfrac{t}{\varepsilon}} + \frac{\varepsilon_0}{d} \right]}$$
+
+
+
+(3) Polarization charge surface density $ \sigma_e' $ on the dielectric
+
+dielectric area:
+$$D = \frac{Q_A}{S/2} = \frac{C_A U}{S/2}.$$
+Polarization:
+$$P = D \left( 1 - \frac{\varepsilon_0}{\varepsilon} \right).$$
+
+$$\sigma_e' = P = D \left( 1 - \frac{\varepsilon_0}{\varepsilon} \right).\qquad D = \dfrac{Q}{S} \cdot \dfrac{2C_A}{C_A + C_B} $$
+
+$$\boxed{\sigma_e' = \frac{Q}{S} \cdot \frac{2C_A}{C_A + C_B} \left( 1 - \frac{\varepsilon_0}{\varepsilon} \right)}$$
+
+
+
+
+
+
+\newpage
+
+2.3-19
+
+
+
+(1) Electric field $ E $ and displacement $ D $ 
+
+Gauss’s law:
+$$D = \frac{Q}{4\pi r^2} \quad (r > R).$$
+
+$$ R < r < a :E = \frac{D}{\varepsilon_0} = \frac{Q}{4\pi\varepsilon_0 r^2}.$$
+
+$$ a < r < b :E = \frac{D}{\varepsilon} = \frac{Q}{4\pi\varepsilon r^2}.$$
+
+$$ r > b :E = \frac{Q}{4\pi\varepsilon_0 r^2}.$$
+
+$$
+\boxed{
+\begin{aligned}
+&R<r<a:\quad D = \frac{Q}{4\pi r^2},\; E = \frac{Q}{4\pi\varepsilon_0 r^2},\\
+&a<r<b:\quad D = \frac{Q}{4\pi r^2},\; E = \frac{Q}{4\pi\varepsilon r^2},\\
+&r>b:\quad D = \frac{Q}{4\pi r^2},\; E = \frac{Q}{4\pi\varepsilon_0 r^2}.
+\end{aligned}}
+$$
+
+
+
+(2) Polarization $ P $ and surface polarization charge density $ \sigma_e' $
+
+$$P = D - \varepsilon_0 E = \frac{Q}{4\pi r^2} \left( 1 - \frac{\varepsilon_0}{\varepsilon} \right).$$
+
+Surface polarization charge density ($ \sigma_p' = \mathbf{P} \cdot \mathbf{n}_{\text{out}} $):
+
+$$\sigma_e'(a) = -P(a) = -\frac{Q}{4\pi a^2} \left( 1 - \frac{\varepsilon_0}{\varepsilon} \right).$$
+
+$$\sigma_e'(b) = P(b) = \frac{Q}{4\pi b^2} \left( 1 - \frac{\varepsilon_0}{\varepsilon} \right).$$
+$$
+\boxed{P = \frac{Q}{4\pi r^2} \left( 1 - \frac{\varepsilon_0}{\varepsilon} \right),\quad
+\sigma_e'(a) = -\frac{Q}{4\pi a^2} \left( 1 - \frac{\varepsilon_0}{\varepsilon} \right),\quad
+\sigma_e'(b) = \frac{Q}{4\pi b^2} \left( 1 - \frac{\varepsilon_0}{\varepsilon} \right)}
+$$
+
+
+
+(3) Volume polarization charge density $ \rho_e' $ inside the dielectric
+
+$$\rho_e' = -\nabla \cdot \mathbf{P}.$$
+
+Since $ P(r) \propto 1/r^2 $, we have $ \nabla \cdot \mathbf{P} = 0 $, hence:
+
+$$\boxed{\rho_e' = 0}$$
+
+
+
+
+
+
+\newpage
+
+2.3-24
+
+By Gauss’s law:
+
+$$D(\rho) \cdot 2\pi\rho l = Q \quad \Rightarrow \quad D(\rho) = \frac{Q}{2\pi\rho l}.$$
+
+Electric field:
+
+$$E_1(\rho) = \frac{D}{\varepsilon_1} = \frac{Q}{2\pi\varepsilon_1 l \rho} \quad (a < \rho < r),$$
+
+$$E_2(\rho) = \frac{Q}{2\pi\varepsilon_2 l \rho} \quad (r < \rho < b).$$
+
+Voltage:
+
+$$U = \int_a^r E_1 \, d\rho + \int_r^b E_2 \, d\rho= \frac{Q}{2\pi l} \left[ \frac{1}{\varepsilon_1} \ln\frac{r}{a} + \frac{1}{\varepsilon_2} \ln\frac{b}{r} \right].$$
+
+Capacitance:
+
+$$C = \frac{Q}{U} = \frac{2\pi l}{\frac{1}{\varepsilon_1} \ln\frac{r}{a} + \frac{1}{\varepsilon_2} \ln\frac{b}{r}}.$$
+
+$$\boxed{C = \frac{2\pi l}{\frac{1}{\varepsilon_1} \ln\frac{r}{a} + \frac{1}{\varepsilon_2} \ln\frac{b}{r}}}$$
+
+
+
+\newpage
+
+2.3-35
+
+
+By Gauss’s law:$D(\rho) = \frac{\lambda}{2\pi\rho}$
+
+$$E_1(\rho) = \frac{D}{\varepsilon_1} = \frac{\lambda}{2\pi\varepsilon_1 \rho} \quad (R_1 < \rho < r)\qquad E_2(\rho) = \frac{D}{\varepsilon_2} = \frac{\lambda}{\pi\varepsilon_1 \rho} \quad (r < \rho < R_2)$$
+$$\rho = R_1^+ ,\quad E_{1,\max} = \frac{\lambda}{2\pi\varepsilon_1 R_1}\qquad \qquad \quad\rho = r^+ ,\quad E_{2,\max} = \frac{\lambda}{\pi\varepsilon_1 r}\qquad\qquad$$
+
+$ E_{2,\max} = 2 \cdot \frac{R_1}{r} \cdot E_{1,\max} > E_{1,\max} ,\qquad$the outer dielectric breaks down first.
+
+
+
+$$\lambda = \pi\varepsilon_1 r E_m ,\qquad E_1(\rho) = \frac{r E_m}{2\rho}, \quad E_2(\rho) = \frac{r E_m}{\rho}\qquad\qquad\qquad\qquad\qquad$$
+
+
+$$U_m = \int_{R_1}^{r} \frac{r E_m}{2\rho} \, d\rho + \int_{r}^{R_2} \frac{r E_m}{\rho} \, d\rho= \frac{r E_m}{2} \ln\frac{r}{R_1} + r E_m \ln\frac{R_2}{r}.$$
+
+$$U_m = \frac{r E_m}{2} \left[ \ln\frac{r}{R_1} + 2\ln\frac{R_2}{r} \right]= \frac{r E_m}{2} \ln\frac{R_2^2}{r R_1}.$$
+
+
+
+
+
+
+\newpage
+
+2.3-39
+
+Before 
+
+$$C_0 = \frac{\varepsilon_0 S}{d}, \quad Q_0 = C_0 U, \quad W_0 = \frac{1}{2} C_0 U^2$$
+
+After 
+
+$$C = \frac{\varepsilon S}{d}, \quad Q = C U, \quad W = \frac{1}{2} C U^2$$
+
+
+
+(1) Change in electrostatic energy
+$$\Delta W_e = W - W_0 = \frac{S U^2}{2d} (\varepsilon - \varepsilon_0).$$
+$$\boxed{\Delta W_e = \frac{S U^2}{2d} (\varepsilon - \varepsilon_0)}$$
+
+
+
+(2) Work done by the electric field on the battery  
+Charge increment:
+$$\Delta Q = Q - Q_0 = \frac{S U}{d} (\varepsilon - \varepsilon_0)$$
+
+Work done by the battery (energy supplied by battery):
+$$W_{\text{source}} = U \cdot \Delta Q = \frac{S U^2}{d} (\varepsilon - \varepsilon_0)$$
+$$\boxed{W_{\text{source}} = \frac{S U^2}{d} (\varepsilon - \varepsilon_0)}$$
+
+
+
+(3) Work done by the electric field on the dielectric slab  
+Energy conservation:
+$$W_{\text{source}} = \Delta W_e + W_{\text{diel}}$$
+
+$$W_{\text{diel}} = W_{\text{source}} - \Delta W_e= \frac{S U^2}{2d} (\varepsilon - \varepsilon_0)$$
+
+$$\boxed{W_{\text{diel}} = \frac{S U^2}{2d} (\varepsilon - \varepsilon_0)}$$
+
+
+
+
+
+
+
+
+
+
+\end{document}
